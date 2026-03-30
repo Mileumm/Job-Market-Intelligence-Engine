@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Engineering Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f4f7f6; 
+            color: #333; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        h1 { 
+            color: #2c3e50; 
+            font-weight: 800; 
+            margin-bottom: 40px; 
+            font-size: 2.5rem;
+        }
+        .grid { 
+            display: flex; 
+            gap: 30px; 
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card { 
+            background: white; 
+            padding: 40px 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            text-align: center; 
+            text-decoration: none; 
+            color: inherit; 
+            width: 260px; 
+            transition: transform 0.2s, box-shadow 0.2s; 
+            border: 1px solid #eee;
+        }
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+            border-color: #3498db;
+        }
+        .card h2 { 
+            color: #3498db; 
+            margin-top: 0; 
+            font-size: 1.5rem;
+        }
+        .card p { 
+            color: #666; 
+            font-size: 1rem; 
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 Project 42: Data Portal</h1>
+    
+    <div class="grid">
+        <a href="http://localhost:8080" class="card" target="_blank">
+            <h2>⚙️ Airflow UI</h2>
+            <p>Manage pipelines, trigger DAGs manually, and check execution logs.</p>
+        </a>
+
+        <a href="job_market_dashboard.html" class="card">
+            <h2>📊 Job Dashboard</h2>
+            <p>View the AI-enriched job market insights and query the Silver layer.</p>
+        </a>
+    </div>
+
+</body>
+</html>

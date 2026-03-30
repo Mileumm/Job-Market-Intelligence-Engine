@@ -10,7 +10,6 @@ import random
  
 load_dotenv()
 
-
 class LinkedInScraper:
     def __init__(self):
         # The class stores its own list of user agents
@@ -47,6 +46,17 @@ class LinkedInScraper:
             "Accept-Language": "en-US,en;q=0.9",
             "Referer": "https://www.google.com/"
         }
+        
+    def determine_workplace_type(self, location_string):
+        """Parses the LinkedIn location string to find the workplace type."""
+        loc_lower = str(location_string).lower()
+        
+        if "remote" in loc_lower or "télétravail" in loc_lower:
+            return "Remote"
+        elif "hybrid" in loc_lower or "hybride" in loc_lower:
+            return "Hybrid"
+        else:
+            return "On-site"
 
     def fetch_quebec_jobs(self, keywords="Data Engineer", location="Quebec, Canada", start=0):
         url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords={keywords}&location={location}&start={start}"
@@ -65,12 +75,14 @@ class LinkedInScraper:
         # for each element, we search if it match with the patern wish 
         for card in job_cards:
             try:
+                scraped_location = card.find("span", class_="job-search-card__location").get_text(strip=True)
                 job = {
                     "title": card.find("h3", class_="base-search-card__title").get_text(strip=True),
                     "company": card.find("h4", class_="base-search-card__subtitle").get_text(strip=True),
-                    "location": card.find("span", class_="job-search-card__location").get_text(strip=True),
+                    "location": scraped_location,
                     "link": card.find("a", class_="base-card__full-link")["href"],
-                    "date": card.find("time")["datetime"] if card.find("time") else None
+                    "date": card.find("time")["datetime"] if card.find("time") else None,
+                    "workplace_type": self.determine_workplace_type(scraped_location)
                 }
                 jobs.append(job)
             except Exception as e:
@@ -146,7 +158,7 @@ class DatabaseManager:
             
             insert_query = """
             INSERT INTO raw_jobs (title, company, location, link, date)
-            SELECT title, company, location, link, date FROM temp_jobs
+            SELECT title, company, location, link, date, workplace_type FROM temp_jobs
             ON CONFLICT (link) DO NOTHING;
             """
             
@@ -156,8 +168,49 @@ class DatabaseManager:
         except Exception as e:
             print(f"Error: {e}")
     
+    def save_silver_companies(self, enriched_data_list):
+        """
+        Takes a list of dictionaries containing LLM and API data 
+        and saves it to the Silver layer table.
+        """
+        if not enriched_data_list:
+            print("No enriched data to save.")
+            return
+
+        # 1. Convert the list of Python dictionaries into a Pandas DataFrame
+        df = pd.DataFrame(enriched_data_list)
+
+        # 2. Safety Check: Ensure all columns exist even if the API failed
+        expected_columns = [
+            "company_name", "industry", "detailed_description", 
+            "company_size", "tech_team_size", "public_sentiment", 
+            "company_rating", "review_count"
+        ]
+        
+        for col in expected_columns:
+            if col not in df.columns:
+                df[col] = None  # Fill missing columns with NULL for the database
+
+        try:
+            print(f"Saving {len(df)} enriched companies to the database...")
+            
+            # 3. Save to PostgreSQL
+            # We use a new table called 'silver_companies' to keep our raw data safe.
+            # if_exists='replace' means it overwrites the Silver table with fresh data every run,
+            # which is standard for an idempotent Airflow pipeline.
+            df.to_sql(
+                name="silver_companies", 
+                con=self.engine, 
+                if_exists="replace", 
+                index=False
+            )
+            print("Silver layer successfully updated! ✅")
+            
+        except Exception as e:
+            print(f"FATAL: Database insertion failed: {e}")
+    
     def fill_db(self, df):
-        empty_df = pd.DataFrame(columns=["title", "company", "location", "link", "date"])
+        empty_df = pd.DataFrame(columns=["title", "company", "location", "link", "date", "workplace_type"])
         empty_df.to_sql('raw_jobs', self.engine, if_exists='append', index=False)
 
         # 3. Add the Constraint (Only if it doesn't exist)
@@ -179,27 +232,17 @@ class DatabaseManager:
 
         self.save_to_database(df)
 
-# Execution
-if __name__ == "__main__":
-    
-    search_queries = ["Data Engineer", "Ingénieur de données", "Data Architect"]
-    my_scraper = LinkedInScraper()
-    all_jobs = []
-    for query in search_queries:
-        print(f"--- Starting search for: {query} ---")
-        for i in range(0, 50, 25):  # Get first 2 pages (25 jobs per page)
-            print(f"Fetching {query} starting at {i}...")
-            batch = my_scraper.fetch_quebec_jobs(keywords=query, start=i)
-            all_jobs.extend(batch)
-            # Sleep between batches to respect rate limits
-            time.sleep(random.uniform(3, 7))
-
-    df = pd.DataFrame(all_jobs)
-
-    # 1. Connect to the database we just started in Docker
-    # Format: postgresql://user:password@localhost:port/database_name
-    my_db = DatabaseManager()
-    my_db.fill_db(df)
-    my_scraper.enrich_job_descriptions(my_db.engine)
-
-    print("Your database is now enriched with job details.")
+    def get_unique_companies(self):
+        """Extracts a distinct list of companies from the raw jobs table."""
+        try:
+            with self.engine.connect() as conn:
+                # SELECT DISTINCT ensures we only get each company exactly once
+                result = conn.execute(text("SELECT DISTINCT company FROM raw_jobs WHERE company IS NOT NULL;"))
+                # Convert the SQL result into a clean Python list
+                companies = [row[0] for row in result]
+                
+                print(f"Found {len(companies)} unique companies in the database.")
+                return companies
+        except Exception as e:
+            print(f"Error fetching companies: {e}")
+            return []

@@ -17,26 +17,24 @@ if not inspector.has_table("raw_jobs"):
     SELECT 
         title,
         company,
-        -- 1. Tech Skills Extraction (using case-insensitive regex)
-        (description ~* 'python') AS has_python,
-        (description ~* 'sql|postgresql|snowflake|bigquery') AS has_sql,
-        (description ~* 'spark|pyspark|databricks') AS has_spark,
-        (description ~* 'aws|azure|gcp|cloud') AS has_cloud,
-        (description ~* 'airflow|prefect|dagster') AS has_orchestration,
-        
-        -- 2. Language & Location Logic (Crucial for the Quebec Market)
-        (description ~* 'french|français|bilingue|bilingual') AS is_bilingual,
+        (description ~* 'Python') AS programming,
+        (description ~* 'AWS|GCP|Azure') AS cloud,
+        (description ~* 'Spark|Snowflake|Airflow|dbt') AS tools,
+        (description ~* 'French') AS language,
         (location ~* 'montréal|montreal') AS is_in_mtl,
-        
-        -- 3. Career Level Logic
         (title ~* 'intern|stagiaire|stage|junior|student|étudiant') AS is_entry_level
-
     FROM raw_jobs;
     """
-
+    silver_sql_ia = """
+    CREATE OR REPLACE VIEW companies_list AS
+    SELECT DISTINCT
+        company
+    FROM silver_jobs_skills;
+    """
     try:
         with engine.connect() as conn:
             conn.execute(text(silver_sql))
+            conn.execute(text(silver_sql_ia))
             conn.commit()
         print("Transformation complete.")
     except Exception as e:

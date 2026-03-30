@@ -1,0 +1,14 @@
+{"timestamp":"2026-03-28T12:53:00.553780Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 96. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-28T12:53:02.295058Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-28T12:53:02.296056Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-28T12:53:02.458810Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/linkedin_pipeline.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-03-28T12:53:02.539437Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-28T12:53:02.540863Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-28T12:53:02.541344Z","level":"info","event":"Current task name:setup_database","logger":"task.stdout"}
+{"timestamp":"2026-03-28T12:53:02.541550Z","level":"info","event":"Dag name:linkedin_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-03-28T12:53:02.543613Z","level":"info","event":"Connecting to database to set up tables...","logger":"task.stdout"}
+{"timestamp":"2026-03-28T12:53:02.545032Z","level":"info","event":"Database ready.","logger":"task.stdout"}
+{"timestamp":"2026-03-28T12:53:02.545804Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-28T12:53:02.567083Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-28T12:53:02.567312Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-28T12:53:02.567533Z","level":"info","event":"Task operator:<Task(PythonOperator): setup_database>","logger":"task.stdout"}

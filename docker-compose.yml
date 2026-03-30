@@ -11,14 +11,34 @@ services:
       - ./postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    networks:
+      - job_data_network
     
-  worker:
-      build: ./data_script
-      env_file: .env
-      environment:
-        - DATABASE_URL=postgresql://${USER_DB}:${PW_DB}@db:5432/${TABLE_DB}
-      depends_on:
-        - db
-      volumes:
-        - ./data_script:/app
+  metabase:
+    image: metabase/metabase:latest
+    container_name: job_market_bi
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    restart: always
+    networks:
+      - job_data_network
+
+  dashboard_server:
+    image: nginx:alpine
+    container_name: job_market_web
+    user: root
+    ports:
+      - "8000:80"
+    volumes:
+      - ${AIRFLOW_PROJ_DIR:-.}/airflow/dags:/usr/share/nginx/html:ro
+    restart: always
+    networks:
+      - job_data_network
+
+networks:
+  job_data_network:
+    name: job_data_network
+    driver: bridge
     

@@ -1,0 +1,28 @@
+{"timestamp":"2026-03-30T10:12:57.134021Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 127. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-30T10:12:58.617031Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-30T10:12:58.617628Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/api_test.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-30T10:12:58.627425Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/api_test.py","lineno":2,"logger":"py.warnings"}
+{"timestamp":"2026-03-30T10:12:58.675024Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:12:58.676294Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:12:58.676466Z","level":"info","event":"Current task name:test_rapidapi_key","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:12:58.676591Z","level":"info","event":"Dag name:diagnostic_api_connection","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:12:58.678215Z","level":"info","event":"🚀 Starting API Diagnostic Test...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:00.452841Z","level":"info","event":"📡 Testing connection to RapidAPI for company: Ubisoft","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:00.453891Z","level":"info","event":"🔍 Searching rating for Ubisoft via DuckDuckGo...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:00.454383Z","level":"info","event":"⏳ Sleeping for 3.42 seconds to respect rate limits...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:03.876396Z","level":"warning","event":"This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.","category":"RuntimeWarning","filename":"/opt/airflow/scripts/company_enrichment.py","lineno":98,"logger":"py.warnings"}
+{"timestamp":"2026-03-30T10:13:04.148431Z","level":"info","event":"response: https://www.bing.com/search?q=Ubisoft+company+employee+rating+score+glassdoor 200","logger":"primp","filename":"lib.rs","lineno":419}
+{"timestamp":"2026-03-30T10:13:04.634594Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.636158Z","level":"info","event":"✅ --- RAW API RESPONSE ---","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.636516Z","level":"info","event":"{","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.636778Z","level":"info","event":"    \"rating\": \"Unknown\",","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.637029Z","level":"info","event":"    \"review_count\": 0","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.638845Z","level":"info","event":"}","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.639738Z","level":"info","event":"--------------------------","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.641150Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.641482Z","level":"info","event":"⚠️ WARNING: The API returned empty/unknown data.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.641714Z","level":"info","event":"Possible causes: Expired key, exceeded monthly quota, or the API endpoint changed.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.648500Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-30T10:13:04.700556Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.701480Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-30T10:13:04.703052Z","level":"info","event":"Task operator:<Task(PythonOperator): test_rapidapi_key>","logger":"task.stdout"}

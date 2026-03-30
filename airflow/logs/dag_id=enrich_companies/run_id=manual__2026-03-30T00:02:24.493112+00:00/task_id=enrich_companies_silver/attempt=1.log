@@ -1,0 +1,50 @@
+{"timestamp":"2026-03-30T00:02:27.885009Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 405. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-30T00:02:30.323052Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-30T00:02:30.326466Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-30T00:02:57.614955Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:02:57.646950Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:02:57.650489Z","level":"info","event":"Current task name:enrich_companies_silver","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:02:57.661329Z","level":"info","event":"Dag name:enrich_companies","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:02:57.670480Z","level":"info","event":"Starting Company Enrichment (Silver Layer)...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:02:59.325709Z","level":"info","event":"Found 25 unique companies in the database.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:00.040807Z","level":"info","event":"Found 16 companies already enriched in Silver layer.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:00.063419Z","level":"info","event":"Companies left to process: 9","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:00.063884Z","level":"info","event":"Processing NEW company: Varsity Tutors, a Nerdy Company","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:01.706531Z","level":"info","event":"Fetching Google Reviews for Varsity Tutors, a Nerdy Company...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:02.231563Z","level":"info","event":"RapidAPI error: 429","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:05.239589Z","level":"info","event":"Processing NEW company: KPMG Canada","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:07.124294Z","level":"info","event":"Fetching Google Reviews for KPMG Canada...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:08.899762Z","level":"info","event":"RapidAPI error: 429","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:11.920554Z","level":"info","event":"Processing NEW company: Davie","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:12.588105Z","level":"info","event":"Asking Gemini to extract detailed info...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:12.590025Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-30T00:03:16.858664Z","level":"info","event":"Fetching Google Reviews for Davie...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:17.377579Z","level":"info","event":"RapidAPI error: 429","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:20.386550Z","level":"info","event":"Processing NEW company: Co-operators Assurance et services financiers","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:21.722435Z","level":"info","event":"Fetching Google Reviews for Co-operators Assurance et services financiers...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:21.925334Z","level":"info","event":"RapidAPI error: 429","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:24.969591Z","level":"info","event":"Processing NEW company: WSP in Canada","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:55.218594Z","level":"info","event":"Failed to scrape wspgroup.ca: HTTPSConnectionPool(host='www.wspgroup.ca', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.wspgroup.ca', port=443) at 0xffff7da6c980>, 'Connection to www.wspgroup.ca timed out. (connect timeout=10)'))","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:56.415552Z","level":"info","event":"Fetching Google Reviews for WSP in Canada...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:56.610572Z","level":"info","event":"RapidAPI error: 429","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:03:59.612841Z","level":"info","event":"Processing NEW company: TEHORA inc.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:00.969511Z","level":"info","event":"Fetching Google Reviews for TEHORA inc....","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:01.146261Z","level":"info","event":"RapidAPI error: 429","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:04.152637Z","level":"info","event":"Processing NEW company: CIMA+","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:04.721674Z","level":"info","event":"Asking Gemini to extract detailed info...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:04.724353Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-30T00:04:07.941489Z","level":"info","event":"Fetching Google Reviews for CIMA+...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:08.107621Z","level":"info","event":"RapidAPI error: 429","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:11.109641Z","level":"info","event":"Processing NEW company: Ville de Québec","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:11.248618Z","level":"info","event":"Failed to scrape quebec.qc.ca: HTTPSConnectionPool(host='www.quebec.qc.ca', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.quebec.qc.ca', port=443): Failed to resolve 'www.quebec.qc.ca' ([Errno -2] Name or service not known)\"))","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:12.449830Z","level":"info","event":"Fetching Google Reviews for Ville de Québec...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:12.629169Z","level":"info","event":"RapidAPI error: 429","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:15.630562Z","level":"info","event":"Processing NEW company: iA Financial Group (Industrial Alliance)","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:16.962498Z","level":"info","event":"Fetching Google Reviews for iA Financial Group (Industrial Alliance)...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:17.171807Z","level":"info","event":"RapidAPI error: 429","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:20.182002Z","level":"info","event":"Saving 25 enriched companies to the database...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:20.280636Z","level":"info","event":"Silver layer successfully updated! ✅","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:20.296426Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-30T00:04:20.318775Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:20.319474Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-30T00:04:20.322707Z","level":"info","event":"Task operator:<Task(PythonOperator): enrich_companies_silver>","logger":"task.stdout"}
