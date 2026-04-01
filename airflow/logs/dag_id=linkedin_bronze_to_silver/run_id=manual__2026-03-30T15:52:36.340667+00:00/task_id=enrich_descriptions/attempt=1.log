@@ -1,0 +1,14 @@
+{"timestamp":"2026-03-30T15:53:20.820511Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 136. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-30T15:53:21.336565Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-30T15:53:21.337315Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-30T15:53:22.716276Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:22.716553Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:22.716755Z","level":"info","event":"Current task name:enrich_descriptions","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:22.716906Z","level":"info","event":"Dag name:linkedin_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:22.717043Z","level":"info","event":"Starting Job Description enrichment process...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:22.741364Z","level":"info","event":"No pending descriptions to fetch.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:22.741676Z","level":"info","event":"Job Description enrichment complete.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:22.741651Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-30T15:53:22.755945Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:22.756220Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:22.756478Z","level":"info","event":"Task operator:<Task(PythonOperator): enrich_descriptions>","logger":"task.stdout"}

@@ -8,7 +8,7 @@ services:
       POSTGRES_PASSWORD: ${PW_DB}
       POSTGRES_DB: ${TABLE_DB}
     volumes:
-      - ./postgres_data:/var/lib/postgresql/data
+      - postgres_data_vol:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     networks:
@@ -36,7 +36,9 @@ services:
     restart: always
     networks:
       - job_data_network
-
+  
+volumes:                  
+  postgres_data_vol:
 networks:
   job_data_network:
     name: job_data_network

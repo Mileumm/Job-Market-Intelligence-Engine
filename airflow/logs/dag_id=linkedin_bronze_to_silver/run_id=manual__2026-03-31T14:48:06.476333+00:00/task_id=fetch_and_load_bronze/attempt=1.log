@@ -1,0 +1,12 @@
+{"timestamp":"2026-03-31T14:48:15.678655Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 524. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-31T14:48:15.733897Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-31T14:48:15.736341Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-31T14:48:20.842749Z","level":"info","event":"--- Fetching Data Engineer ---","logger":"task.stdout"}
+{"timestamp":"2026-03-31T14:48:31.693309Z","level":"info","event":"--- Fetching Ingénieur de données ---","logger":"task.stdout"}
+{"timestamp":"2026-03-31T14:48:46.967360Z","level":"info","event":"--- Fetching Data Architect ---","logger":"task.stdout"}
+{"timestamp":"2026-03-31T14:48:57.687268Z","level":"info","event":"Removed 8 duplicate jobs before inserting.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T14:48:57.743545Z","level":"info","event":"Error in database insertion: (psycopg2.OperationalError) could not translate host name \"db\" to address: Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T14:48:57.743893Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-31T14:48:57.744095Z","level":"info","event":"(Background on this error at: https://sqlalche.me/e/20/e3q8)","logger":"task.stdout"}
+{"timestamp":"2026-03-31T14:48:57.744234Z","level":"info","event":"Saved 42 unique jobs to the Bronze layer.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T14:48:57.745171Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

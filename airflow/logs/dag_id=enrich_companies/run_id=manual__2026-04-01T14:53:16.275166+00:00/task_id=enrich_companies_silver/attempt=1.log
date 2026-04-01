@@ -1,0 +1,15 @@
+{"timestamp":"2026-04-01T14:53:17.189336Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 10629. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-01T14:53:17.204449Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-01T14:53:17.205363Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-01T14:53:18.643655Z","level":"info","event":"Starting Batch Company Enrichment (Silver Layer)...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T14:53:18.740563Z","level":"info","event":"Found 30 unique companies in the database.","logger":"task.stdout"}
+{"timestamp":"2026-04-01T14:53:18.755532Z","level":"info","event":"INFO - Gathering data for: Syneos Health","logger":"task.stdout"}
+{"timestamp":"2026-04-01T14:53:21.145076Z","level":"info","event":"Found 1 companies to enrich. Starting AI batches...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T14:53:21.148189Z","level":"info","event":"Processing company batch 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T14:53:21.145400Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-01T14:53:21.353481Z","level":"info","event":"❌ Unhandled API Error with gemini-3.0-flash: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}","logger":"task.stdout"}
+{"timestamp":"2026-04-01T14:53:21.355474Z","level":"info","event":"❌ CRITICAL: All models failed for this company batch.","logger":"task.stdout"}
+{"timestamp":"2026-04-01T14:53:25.358184Z","level":"info","event":"Saving 1 newly enriched companies...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T14:53:25.401211Z","level":"info","event":"Saving 30 enriched companies to the database...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T14:53:25.461212Z","level":"info","event":"Silver layer successfully updated! ✅","logger":"task.stdout"}
+{"timestamp":"2026-04-01T14:53:25.468695Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

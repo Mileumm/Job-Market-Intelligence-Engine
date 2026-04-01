@@ -1,0 +1,31 @@
+{"timestamp":"2026-03-30T15:52:46.231207Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 128. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-30T15:52:46.785334Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-30T15:52:46.787226Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-30T15:52:48.457213Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:52:48.457803Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:52:48.458114Z","level":"info","event":"Current task name:fetch_and_load_bronze","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:52:48.458378Z","level":"info","event":"Dag name:linkedin_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:52:48.460361Z","level":"info","event":"--- Fetching Data Engineer ---","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:52:58.206899Z","level":"info","event":"--- Fetching Ingénieur de données ---","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:11.360071Z","level":"info","event":"--- Fetching Data Architect ---","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:19.955617Z","level":"info","event":"Removed 0 duplicate jobs before inserting.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.244128Z","level":"info","event":"Error in database insertion: (psycopg2.errors.UndefinedColumn) column \"workplace_type\" of relation \"raw_jobs\" does not exist","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.244564Z","level":"info","event":"LINE 2: ...O raw_jobs (title, company, location, link, date, workplace_...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.244738Z","level":"info","event":"                                                             ^","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.244879Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.245005Z","level":"info","event":"[SQL:","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.245104Z","level":"info","event":"            INSERT INTO raw_jobs (title, company, location, link, date, workplace_type)","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.245242Z","level":"info","event":"            SELECT title, company, location, link, date, workplace_type FROM temp_jobs","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.245355Z","level":"info","event":"            ON CONFLICT (link) DO UPDATE SET","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.245555Z","level":"info","event":"                title = EXCLUDED.title,","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.245702Z","level":"info","event":"                company = EXCLUDED.company,","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.245851Z","level":"info","event":"                location = EXCLUDED.location,","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.245964Z","level":"info","event":"                date = EXCLUDED.date,","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.246096Z","level":"info","event":"                workplace_type = EXCLUDED.workplace_type;","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.246215Z","level":"info","event":"            ]","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.246311Z","level":"info","event":"(Background on this error at: https://sqlalche.me/e/20/f405)","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.246417Z","level":"info","event":"Saved 50 unique jobs to the Bronze layer.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.245748Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-30T15:53:20.291363Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.291583Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-30T15:53:20.292614Z","level":"info","event":"Task operator:<Task(PythonOperator): fetch_and_load_bronze>","logger":"task.stdout"}

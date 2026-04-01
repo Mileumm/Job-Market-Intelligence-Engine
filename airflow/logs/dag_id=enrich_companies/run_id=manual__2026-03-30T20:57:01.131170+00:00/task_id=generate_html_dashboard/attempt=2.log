@@ -1,0 +1,13 @@
+{"timestamp":"2026-03-30T21:19:01.597367Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 243. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-30T21:19:02.161080Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-30T21:19:02.162204Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-30T21:19:03.216965Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T21:19:03.218784Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-30T21:19:03.218938Z","level":"info","event":"Current task name:generate_html_dashboard","logger":"task.stdout"}
+{"timestamp":"2026-03-30T21:19:03.219031Z","level":"info","event":"Dag name:enrich_companies","logger":"task.stdout"}
+{"timestamp":"2026-03-30T21:19:03.219161Z","level":"info","event":"Generating interactive profile dashboard...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T21:19:03.266454Z","level":"info","event":"✅ Dashboard successfully generated at: /opt/airflow/dags/job_market_dashboard.html","logger":"task.stdout"}
+{"timestamp":"2026-03-30T21:19:03.267266Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-30T21:19:03.285058Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T21:19:03.288821Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-30T21:19:03.288932Z","level":"info","event":"Task operator:<Task(PythonOperator): generate_html_dashboard>","logger":"task.stdout"}

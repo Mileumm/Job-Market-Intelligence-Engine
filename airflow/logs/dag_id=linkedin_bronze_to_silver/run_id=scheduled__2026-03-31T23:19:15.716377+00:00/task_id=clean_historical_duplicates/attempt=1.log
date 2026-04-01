@@ -1,0 +1,6 @@
+{"timestamp":"2026-03-31T23:52:19.519831Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 4473. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-31T23:52:19.547528Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-31T23:52:19.548458Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-31T23:52:21.430475Z","level":"info","event":"Starting Database Cleanup...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T23:52:21.468603Z","level":"info","event":"✅ Database is already perfectly clean. No duplicates found.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T23:52:21.468976Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

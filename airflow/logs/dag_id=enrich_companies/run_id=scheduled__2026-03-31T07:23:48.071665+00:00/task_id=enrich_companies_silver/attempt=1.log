@@ -1,0 +1,8 @@
+{"timestamp":"2026-03-31T09:21:58.580903Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 1638. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-31T09:21:58.645378Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-31T09:21:58.650146Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-31T09:22:00.531760Z","level":"info","event":"Starting Company Enrichment (Silver Layer)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T09:22:00.643508Z","level":"info","event":"Found 26 unique companies in the database.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T09:22:00.655448Z","level":"info","event":"Found 26 companies currently in Silver layer.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T09:22:00.655686Z","level":"info","event":"✅ All companies are fully enriched. Silver layer is up to date!","logger":"task.stdout"}
+{"timestamp":"2026-03-31T09:22:00.658077Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

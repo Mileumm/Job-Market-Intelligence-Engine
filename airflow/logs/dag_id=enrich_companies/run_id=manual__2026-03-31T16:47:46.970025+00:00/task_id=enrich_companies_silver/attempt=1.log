@@ -1,0 +1,133 @@
+{"timestamp":"2026-03-31T16:47:47.317343Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 215. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-31T16:47:47.325704Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-31T16:47:47.326434Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-31T16:47:48.562727Z","level":"info","event":"Starting Company Enrichment (Silver Layer)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:47:48.643948Z","level":"info","event":"Found 25 unique companies in the database.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:47:48.649727Z","level":"info","event":"Silver table does not exist yet or is empty. Proceeding with all companies.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:47:48.649954Z","level":"info","event":"INFO - Processing NEW company: Beneva","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:47:49.621231Z","level":"info","event":"🧠 Asking Gemini to analyze Beneva (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:47:49.621768Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:47:57.675319Z","level":"info","event":"INFO - Processing NEW company: Stantec","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:48:01.071052Z","level":"info","event":"🧠 Asking Gemini to analyze Stantec (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:48:01.071140Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:48:14.378660Z","level":"info","event":"INFO - Processing NEW company: PMP SOLUTIONS","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:48:18.496875Z","level":"info","event":"🧠 Asking Gemini to analyze PMP SOLUTIONS (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:48:18.497664Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:48:32.591653Z","level":"info","event":"INFO - Processing NEW company: Varsity Tutors, a Nerdy Company","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:48:32.766829Z","level":"info","event":"🧠 Asking Gemini to analyze Varsity Tutors, a Nerdy Company (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:48:32.765672Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:48:44.375975Z","level":"info","event":"INFO - Processing NEW company: KPMG Canada","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:48:44.541315Z","level":"info","event":"🧠 Asking Gemini to analyze KPMG Canada (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:48:44.542579Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:48:54.227902Z","level":"info","event":"INFO - Processing NEW company: Davie","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:48:54.581963Z","level":"info","event":"🧠 Asking Gemini to analyze Davie (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:48:54.582316Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:49:09.026191Z","level":"info","event":"INFO - Processing NEW company: Co-operators Assurance et services financiers","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:49:09.544358Z","level":"info","event":"🧠 Asking Gemini to analyze Co-operators Assurance et services financiers (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:49:09.545484Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:49:18.098668Z","level":"info","event":"INFO - Processing NEW company: Promutuel Assurance","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:49:19.628027Z","level":"info","event":"🧠 Asking Gemini to analyze Promutuel Assurance (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:49:19.628217Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:49:31.179631Z","level":"info","event":"INFO - Processing NEW company: Desjardins","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:49:31.864696Z","level":"info","event":"🧠 Asking Gemini to analyze Desjardins (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:49:31.865707Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:49:42.126825Z","level":"info","event":"INFO - Processing NEW company: Astek","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:49:42.894534Z","level":"info","event":"🧠 Asking Gemini to analyze Astek (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:49:42.894569Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:49:52.058982Z","level":"info","event":"INFO - Processing NEW company: WSP in Canada","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:50:22.378596Z","level":"info","event":"⚠️ Failed to scrape wspgroup.ca: HTTPSConnectionPool(host='www.wspgroup.ca', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.wspgroup.ca', port=443) at 0xffff5224bce0>, 'Connection to www.wspgroup.ca timed out. (connect timeout=10)'))","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:50:22.380350Z","level":"info","event":"🧠 Asking Gemini to analyze WSP in Canada (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:50:22.379440Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:50:32.081247Z","level":"info","event":"INFO - Processing NEW company: TEHORA inc.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:50:32.253449Z","level":"info","event":"🧠 Asking Gemini to analyze TEHORA inc. (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:50:32.253456Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:50:39.090367Z","level":"info","event":"INFO - Processing NEW company: AtkinsRéalis","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:50:40.154845Z","level":"info","event":"🧠 Asking Gemini to analyze AtkinsRéalis (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:50:40.153833Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:50:51.309588Z","level":"info","event":"INFO - Processing NEW company: Qualifacts","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:50:52.165804Z","level":"info","event":"🧠 Asking Gemini to analyze Qualifacts (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:50:52.165851Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:51:02.551542Z","level":"info","event":"INFO - Processing NEW company: Rollstack","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:51:03.060086Z","level":"info","event":"🧠 Asking Gemini to analyze Rollstack (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:51:03.060091Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:51:12.384644Z","level":"info","event":"INFO - Processing NEW company: Launch Potato","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:51:13.654187Z","level":"info","event":"🧠 Asking Gemini to analyze Launch Potato (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:51:13.654217Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:51:22.135123Z","level":"info","event":"INFO - Processing NEW company: PCM Innovation","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:51:24.718397Z","level":"info","event":"🧠 Asking Gemini to analyze PCM Innovation (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:51:24.718781Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:51:35.378106Z","level":"info","event":"INFO - Processing NEW company: Kinaxis","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:51:36.079582Z","level":"info","event":"🧠 Asking Gemini to analyze Kinaxis (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:51:36.079604Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:51:46.132052Z","level":"info","event":"INFO - Processing NEW company: Ubisoft","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:51:47.045971Z","level":"info","event":"🧠 Asking Gemini to analyze Ubisoft (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:51:47.046027Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:51:47.139018Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:52:47.141073Z","level":"info","event":"🧠 Asking Gemini to analyze Ubisoft (Attempt 2/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:52:47.142265Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:52:47.540440Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:53:47.543094Z","level":"info","event":"🧠 Asking Gemini to analyze Ubisoft (Attempt 3/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:53:47.545239Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:53:47.908267Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:54:47.920002Z","level":"info","event":"❌ Failed to extract info for Ubisoft after 3 attempts.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:54:50.920893Z","level":"info","event":"INFO - Processing NEW company: CIMA+","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:54:51.863034Z","level":"info","event":"🧠 Asking Gemini to analyze CIMA+ (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:54:51.863893Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:55:01.795337Z","level":"info","event":"INFO - Processing NEW company: Ville de Québec","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:55:01.991632Z","level":"info","event":"⚠️ Failed to scrape quebec.qc.ca: HTTPSConnectionPool(host='www.quebec.qc.ca', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.quebec.qc.ca', port=443): Failed to resolve 'www.quebec.qc.ca' ([Errno -2] Name or service not known)\"))","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:55:02.011047Z","level":"info","event":"🧠 Asking Gemini to analyze Ville de Québec (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:55:01.991709Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:55:02.122580Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:56:02.127067Z","level":"info","event":"🧠 Asking Gemini to analyze Ville de Québec (Attempt 2/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:56:02.129425Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:56:02.509540Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:57:02.511515Z","level":"info","event":"🧠 Asking Gemini to analyze Ville de Québec (Attempt 3/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:57:02.511609Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:57:11.105890Z","level":"info","event":"INFO - Processing NEW company: Exposant 3","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:57:12.276900Z","level":"info","event":"🧠 Asking Gemini to analyze Exposant 3 (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:57:12.277458Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:57:12.549285Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:58:12.551448Z","level":"info","event":"🧠 Asking Gemini to analyze Exposant 3 (Attempt 2/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:58:12.552105Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:58:12.973313Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:59:12.976516Z","level":"info","event":"🧠 Asking Gemini to analyze Exposant 3 (Attempt 3/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:59:12.976875Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T16:59:13.414405Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:06:08.540470Z","level":"info","event":"❌ Failed to extract info for Exposant 3 after 3 attempts.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:06:11.543824Z","level":"info","event":"INFO - Processing NEW company: iA Financial Group (Industrial Alliance)","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:06:11.747697Z","level":"info","event":"🧠 Asking Gemini to analyze iA Financial Group (Industrial Alliance) (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:06:11.748667Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:06:12.200161Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:07:12.208707Z","level":"info","event":"🧠 Asking Gemini to analyze iA Financial Group (Industrial Alliance) (Attempt 2/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:07:12.210740Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:07:12.558508Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:08:12.560924Z","level":"info","event":"🧠 Asking Gemini to analyze iA Financial Group (Industrial Alliance) (Attempt 3/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:08:12.563954Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:08:12.890524Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:09:12.895200Z","level":"info","event":"❌ Failed to extract info for iA Financial Group (Industrial Alliance) after 3 attempts.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:09:15.895557Z","level":"info","event":"INFO - Processing NEW company: SUSE","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:09:17.085022Z","level":"info","event":"🧠 Asking Gemini to analyze SUSE (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:09:17.085352Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:09:17.443979Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:10:17.448206Z","level":"info","event":"🧠 Asking Gemini to analyze SUSE (Attempt 2/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:10:17.449574Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:10:17.803339Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:11:17.809358Z","level":"info","event":"🧠 Asking Gemini to analyze SUSE (Attempt 3/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:11:17.810831Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:11:18.177298Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:12:18.180790Z","level":"info","event":"❌ Failed to extract info for SUSE after 3 attempts.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:12:21.182910Z","level":"info","event":"INFO - Processing NEW company: HumanSignal","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:12:21.990950Z","level":"info","event":"🧠 Asking Gemini to analyze HumanSignal (Attempt 1/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:12:21.995074Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:12:22.342686Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:13:22.346974Z","level":"info","event":"🧠 Asking Gemini to analyze HumanSignal (Attempt 2/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:13:22.348980Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:13:23.926242Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:14:23.928430Z","level":"info","event":"🧠 Asking Gemini to analyze HumanSignal (Attempt 3/3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:14:23.929191Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:14:24.347419Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds before retrying...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:15:24.349982Z","level":"info","event":"❌ Failed to extract info for HumanSignal after 3 attempts.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:15:27.352359Z","level":"info","event":"Saving 25 newly enriched or updated companies...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:15:27.368628Z","level":"info","event":"Saving 25 enriched companies to the database...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:15:27.416363Z","level":"info","event":"Silver layer successfully updated! ✅","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:15:27.426116Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

@@ -1,0 +1,9 @@
+{"timestamp":"2026-04-01T12:52:48.000870Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 9114. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-01T12:52:48.012306Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-01T12:52:48.013056Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-01T12:52:49.449064Z","level":"info","event":"Starting Batch Job-Level AI Enrichment...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T12:52:49.543077Z","level":"info","event":"Found 11 jobs requiring AI analysis. Processing in batches...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T12:52:49.543797Z","level":"info","event":"Processing batch 1 (Jobs 1 to 11)...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T12:52:49.543871Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-01T12:53:19.378246Z","level":"info","event":"Job-Level Enrichment Complete.","logger":"task.stdout"}
+{"timestamp":"2026-04-01T12:53:19.391437Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

@@ -1,0 +1,54 @@
+{"timestamp":"2026-03-31T17:15:28.633104Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 493. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-31T17:15:28.651653Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-31T17:15:28.652726Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-31T17:15:30.500152Z","level":"info","event":"Starting Batch Job-Level AI Enrichment...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:15:30.590422Z","level":"info","event":"✅ Added 'tech_stack' and 'salary' columns to database.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:15:30.601027Z","level":"info","event":"Found 41 jobs requiring AI analysis. Processing in batches...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:15:30.605178Z","level":"info","event":"Processing batch 1 (Jobs 1 to 3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:15:30.605236Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:15:31.002236Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:16:31.008408Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:16:31.540048Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:17:31.612602Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:17:31.965439Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:18:35.971379Z","level":"info","event":"Processing batch 2 (Jobs 4 to 6)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:18:35.974045Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:18:36.591363Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:19:36.598526Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:19:36.969850Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:20:36.971893Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:20:37.351818Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:21:41.365148Z","level":"info","event":"Processing batch 3 (Jobs 7 to 9)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:21:41.367776Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:21:41.899380Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:22:41.902043Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:22:42.289457Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:23:42.293386Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:23:42.980380Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:24:46.983643Z","level":"info","event":"Processing batch 4 (Jobs 10 to 12)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:24:46.986669Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:24:47.219910Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:25:47.234656Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:25:47.671661Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:26:47.674731Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:26:48.073500Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:27:52.092416Z","level":"info","event":"Processing batch 5 (Jobs 13 to 15)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:27:52.094876Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:27:52.335475Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:28:52.341290Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:28:52.657789Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:29:52.665123Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:29:53.054521Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:30:57.060968Z","level":"info","event":"Processing batch 6 (Jobs 16 to 18)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:30:57.063350Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:30:57.397909Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:31:57.405786Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:31:57.620357Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:32.176457Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:32.202339Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:36.207851Z","level":"info","event":"Processing batch 7 (Jobs 19 to 21)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:36.229838Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:36.208288Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:40.223236Z","level":"info","event":"Processing batch 8 (Jobs 22 to 24)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:40.223476Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:40.236431Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}

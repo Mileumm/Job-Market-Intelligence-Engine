@@ -1,0 +1,11 @@
+{"timestamp":"2026-04-01T15:20:14.173054Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 10987. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-01T15:20:14.191997Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-01T15:20:14.192668Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-01T15:20:15.570044Z","level":"info","event":"Starting Job Description enrichment process...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:20:15.582268Z","level":"info","event":"Starting enrichment for 2 jobs...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:20:15.582445Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyst-data-val...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:20:16.554192Z","level":"info","event":"Sleeping for 10.12 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:20:26.678392Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-en-envi...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:20:27.664694Z","level":"info","event":"Sleeping for 5.62 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:20:33.289150Z","level":"info","event":"Job Description enrichment complete.","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:20:33.291343Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

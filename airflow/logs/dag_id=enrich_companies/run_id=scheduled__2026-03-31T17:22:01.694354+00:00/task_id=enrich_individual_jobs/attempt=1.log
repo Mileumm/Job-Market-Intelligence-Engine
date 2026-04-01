@@ -1,0 +1,38 @@
+{"timestamp":"2026-03-31T17:32:28.226987Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 719. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-31T17:32:28.253798Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-31T17:32:28.254759Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-31T17:32:29.778783Z","level":"info","event":"Starting Batch Job-Level AI Enrichment...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:32:29.875125Z","level":"info","event":"Found 41 jobs requiring AI analysis. Processing in batches...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:32:29.875942Z","level":"info","event":"Processing batch 1 (Jobs 1 to 3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:32:29.876000Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:32:29.882726Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:32:33.884011Z","level":"info","event":"Processing batch 2 (Jobs 4 to 6)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:32:33.902234Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:32:33.884338Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:32:37.896670Z","level":"info","event":"Processing batch 3 (Jobs 7 to 9)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:32:37.896818Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:32:37.902547Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:32:41.907876Z","level":"info","event":"Processing batch 4 (Jobs 10 to 12)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:32:41.944833Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:32:41.907939Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:20.478285Z","level":"info","event":"Processing batch 5 (Jobs 13 to 15)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:20.479087Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:20.492230Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:24.493133Z","level":"info","event":"Processing batch 6 (Jobs 16 to 18)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:24.512149Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:24.493602Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:28.501132Z","level":"info","event":"Processing batch 7 (Jobs 19 to 21)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:28.501200Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:28.505856Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:32.506964Z","level":"info","event":"Processing batch 8 (Jobs 22 to 24)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:32.520271Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:32.507147Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:36.520876Z","level":"info","event":"Processing batch 9 (Jobs 25 to 27)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:36.520495Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:36.526977Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:40.532182Z","level":"info","event":"Processing batch 10 (Jobs 28 to 30)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:40.559417Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:40.532162Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:44.548103Z","level":"info","event":"Processing batch 11 (Jobs 31 to 33)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:45:44.548651Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:45:44.559305Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}

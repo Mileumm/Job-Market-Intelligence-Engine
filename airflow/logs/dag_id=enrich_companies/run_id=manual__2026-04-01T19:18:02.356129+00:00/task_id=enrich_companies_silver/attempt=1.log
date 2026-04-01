@@ -1,0 +1,42 @@
+{"timestamp":"2026-04-01T19:18:03.874983Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 249. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-01T19:18:03.896503Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-01T19:18:03.897705Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-01T19:18:10.425845Z","level":"info","event":"Starting Batch Company Enrichment (Silver Layer)...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:11.020389Z","level":"info","event":"Found 25 unique companies in the database.","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:11.078747Z","level":"info","event":"Silver table does not exist yet. Proceeding with all companies.","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:11.080273Z","level":"info","event":"INFO - Gathering data for: Beneva","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:13.714511Z","level":"info","event":"INFO - Gathering data for: Stantec","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:18.251005Z","level":"info","event":"INFO - Gathering data for: Syneos Health","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:20.536176Z","level":"info","event":"INFO - Gathering data for: Varsity Tutors, a Nerdy Company","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:22.661000Z","level":"info","event":"INFO - Gathering data for: PMP SOLUTIONS","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:27.579300Z","level":"info","event":"INFO - Gathering data for: KPMG Canada","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:29.713555Z","level":"info","event":"INFO - Gathering data for: Davie","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:32.064802Z","level":"info","event":"INFO - Gathering data for: Bentley Systems","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:35.268788Z","level":"info","event":"INFO - Gathering data for: Co-operators Assurance et services financiers","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:37.403240Z","level":"info","event":"INFO - Gathering data for: Desjardins","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:39.724728Z","level":"info","event":"INFO - Gathering data for: Astek","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:18:42.144537Z","level":"info","event":"INFO - Gathering data for: WSP in Canada","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:12.345816Z","level":"info","event":"⚠️ Failed to scrape wspgroup.ca: HTTPSConnectionPool(host='www.wspgroup.ca', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.wspgroup.ca', port=443) at 0xffff5a5a8590>, 'Connection to www.wspgroup.ca timed out. (connect timeout=10)'))","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:14.346982Z","level":"info","event":"INFO - Gathering data for: TEHORA inc.","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:16.497317Z","level":"info","event":"INFO - Gathering data for: Rollstack","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:18.824716Z","level":"info","event":"INFO - Gathering data for: Launch Potato","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:22.052313Z","level":"info","event":"INFO - Gathering data for: PCM Innovation","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:28.699685Z","level":"info","event":"INFO - Gathering data for: AtkinsRéalis","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:31.807024Z","level":"info","event":"INFO - Gathering data for: Ubisoft","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:34.471974Z","level":"info","event":"INFO - Gathering data for: Kinaxis","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:36.807703Z","level":"info","event":"INFO - Gathering data for: CIMA+","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:39.315216Z","level":"info","event":"INFO - Gathering data for: Ville de Québec","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:39.441778Z","level":"info","event":"⚠️ Failed to scrape quebec.qc.ca: HTTPSConnectionPool(host='www.quebec.qc.ca', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.quebec.qc.ca', port=443): Failed to resolve 'www.quebec.qc.ca' ([Errno -2] Name or service not known)\"))","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:41.442677Z","level":"info","event":"INFO - Gathering data for: Exposant 3","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:44.099013Z","level":"info","event":"INFO - Gathering data for: iA Financial Group (Industrial Alliance)","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:46.249371Z","level":"info","event":"INFO - Gathering data for: SUSE","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:49.424403Z","level":"info","event":"INFO - Gathering data for: HumanSignal","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:52.587736Z","level":"info","event":"Found 25 companies to enrich. Starting AI batches...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:52.588655Z","level":"info","event":"Processing company batch 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:19:52.593336Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-01T19:20:31.132120Z","level":"info","event":"Processing company batch 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:20:31.134579Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-01T19:21:14.491127Z","level":"info","event":"Saving 25 newly enriched companies...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:21:14.499975Z","level":"info","event":"Saving 25 enriched companies to the database...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:21:14.585938Z","level":"info","event":"Silver layer successfully updated! ✅","logger":"task.stdout"}
+{"timestamp":"2026-04-01T19:21:14.597695Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

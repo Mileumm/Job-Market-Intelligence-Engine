@@ -18,7 +18,7 @@ down:
 	docker compose down
 	cd airflow && docker compose down
 
-re: fclean all
+re: clean all
 
 clean:
 	docker compose down --remove-orphans

@@ -1,0 +1,25 @@
+{"timestamp":"2026-03-30T14:26:41.979889Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 2358. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-30T14:26:42.387351Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-30T14:26:42.388145Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-30T14:26:43.470690Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.470945Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.471140Z","level":"info","event":"Current task name:generate_html_dashboard","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.471255Z","level":"info","event":"Dag name:enrich_companies","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.472434Z","level":"info","event":"Generating interactive profile dashboard...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.494198Z","level":"info","event":"❌ Failed to generate dashboard: (psycopg2.errors.UndefinedColumn) column j.workplace_type does not exist","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.495246Z","level":"info","event":"LINE 5: ...n, j.link as job_link, j.description as job_desc, j.workplac...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.495377Z","level":"info","event":"                                                             ^","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.495487Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.495592Z","level":"info","event":"[SQL:","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.495692Z","level":"info","event":"        SELECT DISTINCT","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.495812Z","level":"info","event":"            c.company_name, c.industry, c.company_rating, c.review_count, c.detailed_description,","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.495930Z","level":"info","event":"            c.website, c.company_size, c.tech_team_size, c.public_sentiment,","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.496030Z","level":"info","event":"            j.title as job_title, j.location as job_location, j.link as job_link, j.description as job_desc, j.workplace_type","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.496125Z","level":"info","event":"        FROM silver_companies c","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.496223Z","level":"info","event":"        LEFT JOIN raw_jobs j ON c.company_name = j.company","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.496316Z","level":"info","event":"    ]","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.496413Z","level":"info","event":"(Background on this error at: https://sqlalche.me/e/20/f405)","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.494616Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-30T14:26:43.508442Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.508557Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:26:43.508675Z","level":"info","event":"Task operator:<Task(PythonOperator): generate_html_dashboard>","logger":"task.stdout"}

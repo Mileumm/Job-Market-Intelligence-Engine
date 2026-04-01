@@ -1,0 +1,13 @@
+{"timestamp":"2026-03-30T14:22:14.226446Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 2298. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-30T14:22:14.696791Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-30T14:22:14.698011Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-30T14:22:15.853163Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:22:15.853402Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:22:15.853605Z","level":"info","event":"Current task name:setup_database","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:22:15.853722Z","level":"info","event":"Dag name:linkedin_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:22:15.854785Z","level":"info","event":"Connecting to database to verify setup...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:22:15.855253Z","level":"info","event":"Database connection verified.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:22:15.855556Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-30T14:22:15.873619Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:22:15.873779Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-30T14:22:15.873994Z","level":"info","event":"Task operator:<Task(PythonOperator): setup_database>","logger":"task.stdout"}

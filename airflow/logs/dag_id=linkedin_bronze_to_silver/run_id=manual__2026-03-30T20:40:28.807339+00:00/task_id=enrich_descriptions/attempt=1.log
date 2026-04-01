@@ -1,0 +1,100 @@
+{"timestamp":"2026-03-30T20:41:39.984115Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 300. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-30T20:41:40.421527Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-30T20:41:40.422701Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-30T20:41:41.820479Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:41.820801Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:41.820985Z","level":"info","event":"Current task name:enrich_descriptions","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:41.821145Z","level":"info","event":"Dag name:linkedin_bronze_to_silver","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:41.822695Z","level":"info","event":"Starting Job Description enrichment process...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:41.844180Z","level":"info","event":"Starting enrichment for 43 jobs...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:41.844363Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/programming-soft...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:42.775464Z","level":"info","event":"Sleeping for 5.49 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:48.270504Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/lead-data-engine...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:49.247336Z","level":"info","event":"Sleeping for 9.45 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:58.705476Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/software-enginee...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:41:59.790471Z","level":"info","event":"Sleeping for 10.92 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:42:10.713431Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/software-enginee...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:42:11.702285Z","level":"info","event":"Sleeping for 11.81 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:42:23.520302Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/software-enginee...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:42:24.511031Z","level":"info","event":"Sleeping for 8.86 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:42:33.377838Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/site-supervision...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:42:34.292072Z","level":"info","event":"Sleeping for 8.18 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:42:42.473008Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/scientifique-de-...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:42:43.405693Z","level":"info","event":"Sleeping for 10.29 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:42:53.696832Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-infrast...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:42:55.035790Z","level":"info","event":"Sleeping for 6.82 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:01.860027Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/engineering-proj...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:03.000120Z","level":"info","event":"Sleeping for 9.74 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:12.746114Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/safety-and-ram-s...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:14.513283Z","level":"info","event":"Sleeping for 6.34 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:20.857936Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/expert-en-scienc...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:21.929701Z","level":"info","event":"Sleeping for 9.34 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:31.274121Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/conseiller-%C3%A...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:32.384053Z","level":"info","event":"Sleeping for 10.98 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:43.363355Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/project-engineer...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:44.375392Z","level":"info","event":"Sleeping for 8.89 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:53.268945Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/site-supervision...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:43:54.079797Z","level":"info","event":"Sleeping for 11.89 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:05.971180Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-collector-c...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:06.764196Z","level":"info","event":"Sleeping for 8.23 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:14.999241Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieur-e...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:16.353081Z","level":"info","event":"Sleeping for 11.60 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:27.961504Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-internship-...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:28.946872Z","level":"info","event":"Sleeping for 5.82 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:34.772661Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/senior-developer...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:35.463313Z","level":"info","event":"Sleeping for 10.10 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:45.570583Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-program...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:46.625325Z","level":"info","event":"Sleeping for 6.10 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:52.731040Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieur-e...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:44:54.403647Z","level":"info","event":"Sleeping for 8.10 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:02.503424Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieure-...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:03.438018Z","level":"info","event":"Sleeping for 5.30 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:09.259680Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/technicien-valid...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:10.396620Z","level":"info","event":"Sleeping for 10.84 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:21.234226Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyst-data-val...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:22.997455Z","level":"info","event":"Sleeping for 11.93 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:34.931587Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieure-...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:36.180927Z","level":"info","event":"Sleeping for 9.21 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:45.411216Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/sp%C3%A9cialiste...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:46.410949Z","level":"info","event":"Sleeping for 5.29 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:51.703025Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/contr%C3%B4leur-...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:45:52.948811Z","level":"info","event":"Sleeping for 6.41 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:00.719184Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/scientifique-de-...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:04.390426Z","level":"info","event":"Sleeping for 10.44 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:14.914931Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-de-r%C3...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:17.515477Z","level":"info","event":"Sleeping for 5.79 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:23.311878Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/e3-analyste-powe...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:26.995204Z","level":"info","event":"Sleeping for 7.85 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:34.864919Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-analysis-tu...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:39.042812Z","level":"info","event":"Sleeping for 6.25 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:45.304979Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-en-envi...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:47.030734Z","level":"info","event":"Sleeping for 6.49 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:46:56.409362Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieure-...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:04.466489Z","level":"info","event":"Sleeping for 5.45 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:08.258332Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-en-envi...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:10.283887Z","level":"info","event":"Sleeping for 7.96 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:18.273411Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/it-architect-at-...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:20.612604Z","level":"info","event":"Sleeping for 5.86 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:29.016382Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-analytics-a...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:37.549290Z","level":"info","event":"Sleeping for 7.27 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:46.663326Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-architect-a...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:48.131733Z","level":"info","event":"Sleeping for 6.57 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:54.714844Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/architecte-analy...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:47:58.726872Z","level":"info","event":"Sleeping for 7.31 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:48:06.148315Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/technical-data-a...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:48:10.311141Z","level":"info","event":"Sleeping for 5.54 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:48:15.838289Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/solution-archite...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:48:17.776042Z","level":"info","event":"Sleeping for 10.02 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:48:28.072941Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/architecte-de-so...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:48:53.865712Z","level":"info","event":"Sleeping for 7.86 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:49:01.735693Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/senior-data-engi...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:49:03.343783Z","level":"info","event":"Sleeping for 6.13 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:49:09.553380Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/architect-data-f...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:49:11.145751Z","level":"info","event":"Sleeping for 6.87 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:49:18.019560Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/architecte-de-do...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:49:19.101093Z","level":"info","event":"Sleeping for 8.29 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:49:27.410218Z","level":"info","event":"Job Description enrichment complete.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:49:27.427099Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-30T20:49:27.486859Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:49:27.487132Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:49:27.490040Z","level":"info","event":"Task operator:<Task(PythonOperator): enrich_descriptions>","logger":"task.stdout"}

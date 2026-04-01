@@ -1,0 +1,15 @@
+{"timestamp":"2026-03-30T20:57:02.628093Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 483. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-30T20:57:03.290621Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-30T20:57:03.291591Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-30T20:57:05.179067Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:57:05.183098Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:57:05.183384Z","level":"info","event":"Current task name:enrich_companies_silver","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:57:05.183542Z","level":"info","event":"Dag name:enrich_companies","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:57:05.183707Z","level":"info","event":"Starting Company Enrichment (Silver Layer)...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:57:05.303666Z","level":"info","event":"Found 25 unique companies in the database.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:57:05.331098Z","level":"info","event":"Found 25 companies currently in Silver layer.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:57:05.331478Z","level":"info","event":"✅ All companies are fully enriched. Silver layer is up to date!","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:57:05.334049Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
+{"timestamp":"2026-03-30T20:57:05.361332Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:57:05.361856Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-03-30T20:57:05.363364Z","level":"info","event":"Task operator:<Task(PythonOperator): enrich_companies_silver>","logger":"task.stdout"}

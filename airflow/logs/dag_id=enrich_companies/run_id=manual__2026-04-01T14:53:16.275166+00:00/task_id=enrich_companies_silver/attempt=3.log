@@ -1,0 +1,13 @@
+{"timestamp":"2026-04-01T15:02:46.449752Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 10761. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-01T15:02:46.461169Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-01T15:02:46.462032Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-01T15:02:47.879915Z","level":"info","event":"Starting Batch Company Enrichment (Silver Layer)...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:02:47.969407Z","level":"info","event":"Found 30 unique companies in the database.","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:02:47.978025Z","level":"info","event":"INFO - Gathering data for: Syneos Health","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:02:50.380149Z","level":"info","event":"Found 1 companies to enrich. Starting AI batches...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:02:50.382176Z","level":"info","event":"Processing company batch 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:02:50.381673Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-01T15:03:38.832464Z","level":"info","event":"Saving 1 newly enriched companies...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:03:38.839906Z","level":"info","event":"Saving 30 enriched companies to the database...","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:03:38.931556Z","level":"info","event":"Silver layer successfully updated! ✅","logger":"task.stdout"}
+{"timestamp":"2026-04-01T15:03:38.948343Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

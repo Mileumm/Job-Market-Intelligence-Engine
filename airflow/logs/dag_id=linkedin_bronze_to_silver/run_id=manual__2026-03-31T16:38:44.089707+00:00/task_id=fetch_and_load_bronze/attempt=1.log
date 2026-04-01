@@ -1,0 +1,11 @@
+{"timestamp":"2026-03-31T16:39:24.902874Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 99. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-31T16:39:24.908989Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-31T16:39:24.909473Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-31T16:39:26.662739Z","level":"info","event":"--- Fetching Data Engineer ---","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:39:38.176694Z","level":"info","event":"--- Fetching Ingénieur de données ---","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:39:48.966680Z","level":"info","event":"--- Fetching Data Architect ---","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:40:01.353609Z","level":"info","event":"Removed 8 duplicate jobs before inserting.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:40:01.429141Z","level":"info","event":"✅ Unique constraint added.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:40:01.442699Z","level":"info","event":"Jobs successfully Upserted (Inserted or Updated) into Bronze layer.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:40:01.444641Z","level":"info","event":"Saved 42 unique jobs to the Bronze layer.","logger":"task.stdout"}
+{"timestamp":"2026-03-31T16:40:01.444699Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

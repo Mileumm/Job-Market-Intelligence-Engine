@@ -1,0 +1,23 @@
+{"timestamp":"2026-03-30T23:20:32.095604Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 138. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-30T23:20:32.281597Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-30T23:20:32.286297Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-30T23:20:39.120472Z","level":"info","event":"Starting Job Description enrichment process...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:20:39.142562Z","level":"info","event":"Starting enrichment for 8 jobs...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:20:39.142759Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/stage-en-donn%C3...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:20:40.141944Z","level":"info","event":"Sleeping for 7.85 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:20:47.989909Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/lead-data-engine...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:20:48.655226Z","level":"info","event":"Sleeping for 5.62 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:20:54.321639Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieure-...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:20:55.236854Z","level":"info","event":"Sleeping for 11.27 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:06.517048Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/software-enginee...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:07.388250Z","level":"info","event":"Sleeping for 10.82 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:18.213086Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/software-enginee...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:19.076936Z","level":"info","event":"Sleeping for 6.86 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:25.987670Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/expert-en-scienc...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:28.948432Z","level":"info","event":"Sleeping for 10.56 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:39.511927Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-developer-a...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:40.467404Z","level":"info","event":"Sleeping for 7.10 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:47.573869Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-en-envi...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:48.568633Z","level":"info","event":"Sleeping for 6.46 seconds...","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:55.032968Z","level":"info","event":"Job Description enrichment complete.","logger":"task.stdout"}
+{"timestamp":"2026-03-30T23:21:55.047623Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

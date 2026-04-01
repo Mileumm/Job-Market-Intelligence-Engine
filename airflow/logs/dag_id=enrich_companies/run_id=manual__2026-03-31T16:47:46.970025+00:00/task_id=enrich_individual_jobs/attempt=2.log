@@ -1,0 +1,35 @@
+{"timestamp":"2026-03-31T17:58:10.546925Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 727. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-03-31T17:58:10.565767Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-03-31T17:58:10.566838Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-03-31T17:58:12.567894Z","level":"info","event":"Starting Batch Job-Level AI Enrichment...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:12.702617Z","level":"info","event":"Found 41 jobs requiring AI analysis. Processing in batches...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:12.703717Z","level":"info","event":"Processing batch 1 (Jobs 1 to 3)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:12.703763Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:58:12.712186Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:16.714090Z","level":"info","event":"Processing batch 2 (Jobs 4 to 6)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:16.729706Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:16.713827Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:58:20.722779Z","level":"info","event":"Processing batch 3 (Jobs 7 to 9)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:20.723980Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:58:20.740655Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:24.744191Z","level":"info","event":"Processing batch 4 (Jobs 10 to 12)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:24.796221Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:24.744792Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:58:28.764061Z","level":"info","event":"Processing batch 5 (Jobs 13 to 15)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:28.763627Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:58:28.774700Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:32.776482Z","level":"info","event":"Processing batch 6 (Jobs 16 to 18)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:32.794487Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:32.776378Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:58:36.788611Z","level":"info","event":"Processing batch 7 (Jobs 19 to 21)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T17:58:36.787970Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T17:58:36.801766Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T18:15:50.961089Z","level":"info","event":"Processing batch 8 (Jobs 22 to 24)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T18:15:51.094792Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T18:15:50.961480Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T18:15:54.984022Z","level":"info","event":"Processing batch 9 (Jobs 25 to 27)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T18:15:54.983944Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T18:15:54.992115Z","level":"info","event":"❌ Gemini Error extracting batch: [Errno -2] Name or service not known","logger":"task.stdout"}
+{"timestamp":"2026-03-31T18:15:58.996406Z","level":"info","event":"Processing batch 10 (Jobs 28 to 30)...","logger":"task.stdout"}
+{"timestamp":"2026-03-31T18:15:58.998357Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-03-31T18:15:59.365545Z","level":"info","event":"⚠️ Gemini Rate Limit hit. Sleeping for 60 seconds...","logger":"task.stdout"}

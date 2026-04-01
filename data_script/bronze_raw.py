@@ -61,31 +61,48 @@ class LinkedInScraper:
     def fetch_quebec_jobs(self, keywords="Data Engineer", location="Quebec, Canada", start=0):
         url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords={keywords}&location={location}&start={start}"
         
-        # connect at url as header
         response = requests.get(url, headers=self.get_random_header())
+        response.encoding = 'utf-8' 
+        
         if response.status_code != 200:
-            print(f"Error: {response.status_code}")
+            print(f"Error fetching jobs: HTTP {response.status_code}")
             return []
-        # if we conect sucessfully convert the text of page understandable data
+            
         soup = BeautifulSoup(response.text, "html.parser")
-        # get all elements in differents lists
         job_cards = soup.find_all("li")
         
         jobs = []
-        # for each element, we search if it match with the patern wish 
         for card in job_cards:
             try:
-                scraped_location = card.find("span", class_="job-search-card__location").get_text(strip=True)
-                job = {
-                    "title": card.find("h3", class_="base-search-card__title").get_text(strip=True),
-                    "company": card.find("h4", class_="base-search-card__subtitle").get_text(strip=True),
+                link_elem = card.find("a", class_="base-card__full-link")
+                if not link_elem:
+                    continue 
+                clean_link = link_elem["href"].split('?')[0]
+                
+                # WE REMOVED THE EXISTING_LINKS CHECK FROM HERE
+                
+                loc_elem = card.find("span", class_="job-search-card__location")
+                scraped_location = loc_elem.get_text(strip=True) if loc_elem else "Unknown Location"
+                
+                title_elem = card.find("h3", class_="base-search-card__title")
+                title = title_elem.get_text(strip=True) if title_elem else "Unknown Title"
+                
+                comp_elem = card.find("h4", class_="base-search-card__subtitle")
+                company = comp_elem.get_text(strip=True) if comp_elem else "Unknown Company"
+                
+                time_elem = card.find("time")
+                date = time_elem["datetime"] if time_elem else None
+                
+                jobs.append({
+                    "title": title,
+                    "company": company,
                     "location": scraped_location,
-                    "link": card.find("a", class_="base-card__full-link")["href"],
-                    "date": card.find("time")["datetime"] if card.find("time") else None,
+                    "link": clean_link,
+                    "date": date,
                     "workplace_type": self.determine_workplace_type(scraped_location)
-                }
-                jobs.append(job)
-            except Exception as e:
+                })
+                
+            except Exception:
                 continue
                 
         return jobs
@@ -125,7 +142,7 @@ class LinkedInScraper:
                 try:
                     print(f"Fetching description for: {link[:50]}...")
                     response = requests.get(link, headers=self.get_random_header())
-                    
+                    response.encoding = 'utf-8'
                     if response.status_code == 200:
                         self.descriptions_parser(conn, link, response)
 
@@ -148,7 +165,7 @@ class DatabaseManager:
         user = os.getenv("USER_DB")
         password = os.getenv("PW_DB")
         db_name = os.getenv("TABLE_DB")
-        host = "db"
+        host = "postgres"
         port = "5432"
         self.engine = create_engine(f"postgresql://{user}:{password}@{host}:{port}/{db_name}")
     
@@ -156,17 +173,25 @@ class DatabaseManager:
         try:
             df.to_sql('temp_jobs', self.engine, if_exists='replace', index=False)
             
+            # FIX 1: Added 'workplace_type' to the INSERT list
+            # FIX 2: Changed DO NOTHING to DO UPDATE to overwrite old data with new data
             insert_query = """
-            INSERT INTO raw_jobs (title, company, location, link, date)
+            INSERT INTO raw_jobs (title, company, location, link, date, workplace_type)
             SELECT title, company, location, link, date, workplace_type FROM temp_jobs
-            ON CONFLICT (link) DO NOTHING;
+            ON CONFLICT (link) DO UPDATE SET 
+                title = EXCLUDED.title,
+                company = EXCLUDED.company,
+                location = EXCLUDED.location,
+                date = EXCLUDED.date,
+                workplace_type = EXCLUDED.workplace_type;
             """
             
             with self.engine.connect() as conn:
                 conn.execute(text(insert_query))
                 conn.commit()
+                print("Jobs successfully Upserted (Inserted or Updated) into Bronze layer.")
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Error in database insertion: {e}")
     
     def save_silver_companies(self, enriched_data_list):
         """
@@ -208,28 +233,50 @@ class DatabaseManager:
             
         except Exception as e:
             print(f"FATAL: Database insertion failed: {e}")
-    
+
     def fill_db(self, df):
-        empty_df = pd.DataFrame(columns=["title", "company", "location", "link", "date", "workplace_type"])
-        empty_df.to_sql('raw_jobs', self.engine, if_exists='append', index=False)
+        # 1. Ensure the base table exists WITH all the new columns natively
+        try:
+            # We add 'workplace_type' and 'description' right from the start
+            empty_df = pd.DataFrame(columns=["title", "company", "location", "link", "date", "workplace_type", "description"])
+            empty_df.to_sql('raw_jobs', self.engine, if_exists='append', index=False)
+        except Exception:
+            pass
 
-        # 3. Add the Constraint (Only if it doesn't exist)
-        with self.engine.connect() as conn:
-            try:
+        # 2. Schema Migrations: Isolate each command in its own transaction block!
+        try:
+            with self.engine.connect() as conn:
                 conn.execute(text("ALTER TABLE raw_jobs ADD CONSTRAINT unique_job_link UNIQUE (link);"))
-
-                print("Unique constraint added.")
-            except Exception:
-                # If it already exists, Postgres throws an error, we just ignore it
-                pass
+                conn.commit()
+                print("✅ Unique constraint added.")
+        except Exception:
+            pass # Constraint already exists
             
-            try:
+        try:
+            with self.engine.connect() as conn:
                 conn.execute(text("ALTER TABLE raw_jobs ADD COLUMN description TEXT;"))
-            except Exception:
-                pass # Column already exists
+                conn.commit()
+                print("✅ Added missing column 'description'.")
+        except Exception:
+            pass # Column already exists
 
-            conn.commit()
+        try:
+            with self.engine.connect() as conn:
+                conn.execute(text("ALTER TABLE raw_jobs ADD COLUMN workplace_type TEXT;"))
+                conn.commit()
+                print("✅ Added missing column 'workplace_type'.")
+        except Exception:
+            pass # Column already exists
 
+        try:
+            with self.engine.connect() as conn:
+                conn.execute(text("ALTER TABLE raw_jobs ADD COLUMN is_active BOOLEAN DEFAULT TRUE;"))
+                conn.commit()
+                print("✅ Added missing column 'is_active'.")
+        except Exception:
+            pass # Column already exists
+
+        # 3. Save the data safely
         self.save_to_database(df)
 
     def get_unique_companies(self):
@@ -246,3 +293,13 @@ class DatabaseManager:
         except Exception as e:
             print(f"Error fetching companies: {e}")
             return []
+    
+    def get_existing_job_links(self):
+        """Fetches all existing job links from the database to prevent re-scraping."""
+        try:
+            with self.engine.connect() as conn:
+                # We only need the link column for our fast-lookup set
+                result = conn.execute(text("SELECT link FROM raw_jobs;"))
+                return set([row[0] for row in result])
+        except Exception:
+            return set() # If table doesn't exist yet, return empty set
