@@ -1,0 +1,52 @@
+{"timestamp":"2026-04-15T17:09:11.387835Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 1743. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-15T17:09:11.392577Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-15T17:09:11.393038Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-15T17:09:12.430341Z","level":"info","event":"Loaded 215 existing jobs from the database.","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:12.432158Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:12.432408Z","level":"info","event":"--- Fetching new jobs for: 'Data Engineer junior' in 'Lyon' ---","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:12.432665Z","level":"info","event":"Scanning page 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:13.119613Z","level":"info","event":"  -> Page 1 had 10 NEW jobs. (Total for query: 10/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:18.691868Z","level":"info","event":"Scanning page 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:19.202565Z","level":"info","event":"  -> Page 2 had 10 NEW jobs. (Total for query: 20/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:23.460721Z","level":"info","event":"Scanning page 3...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:24.082305Z","level":"info","event":"  -> Page 3 had 10 NEW jobs. (Total for query: 30/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:28.837594Z","level":"info","event":"Scanning page 4...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:29.498586Z","level":"info","event":"  -> Page 4 had 10 NEW jobs. (Total for query: 40/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:35.652399Z","level":"info","event":"Scanning page 5...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:36.243795Z","level":"info","event":"  -> Page 5 had 10 NEW jobs. (Total for query: 50/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:36.244243Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:36.244573Z","level":"info","event":"--- Fetching new jobs for: 'Data Engineer intern' in 'Lyon' ---","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:36.244929Z","level":"info","event":"Scanning page 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:36.736979Z","level":"info","event":"  -> Page 1 had 2 NEW jobs. (Total for query: 2/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:43.339699Z","level":"info","event":"Scanning page 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:43.829606Z","level":"info","event":"No more jobs found on LinkedIn for this query (End of results).","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:43.830261Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:43.830516Z","level":"info","event":"--- Fetching new jobs for: 'Data Engineer internship' in 'Lyon' ---","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:43.830673Z","level":"info","event":"Scanning page 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:44.394568Z","level":"info","event":"  -> Page 1 had 0 NEW jobs. (Total for query: 0/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:48.969704Z","level":"info","event":"Scanning page 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:49.344781Z","level":"info","event":"No more jobs found on LinkedIn for this query (End of results).","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:49.345703Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:49.346023Z","level":"info","event":"--- Fetching new jobs for: 'Data Engineer stage' in 'Lyon' ---","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:49.346226Z","level":"info","event":"Scanning page 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:49.935210Z","level":"info","event":"  -> Page 1 had 8 NEW jobs. (Total for query: 8/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:55.317909Z","level":"info","event":"Scanning page 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:55.913244Z","level":"info","event":"No more jobs found on LinkedIn for this query (End of results).","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:55.915282Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:55.915661Z","level":"info","event":"--- Fetching new jobs for: 'Data Engineer entry level' in 'Lyon' ---","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:55.915951Z","level":"info","event":"Scanning page 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:56.315415Z","level":"info","event":"No more jobs found on LinkedIn for this query (End of results).","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:56.315737Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:56.315923Z","level":"info","event":"--- Fetching new jobs for: 'Data Engineer student' in 'Lyon' ---","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:56.316097Z","level":"info","event":"Scanning page 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:56.736626Z","level":"info","event":"No more jobs found on LinkedIn for this query (End of results).","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:56.736967Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:56.737111Z","level":"info","event":"--- Fetching new jobs for: 'Data Engineer étudiant' in 'Lyon' ---","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:56.737232Z","level":"info","event":"Scanning page 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:09:57.260582Z","level":"info","event":"  -> Page 1 had 3 NEW jobs. (Total for query: 3/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:10:04.162051Z","level":"info","event":"Scanning page 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:10:04.582059Z","level":"info","event":"No more jobs found on LinkedIn for this query (End of results).","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:10:04.698507Z","level":"info","event":"Jobs successfully Upserted (Inserted or Updated) into Bronze layer.","logger":"root","filename":"bronze_raw.py","lineno":280}
+{"timestamp":"2026-04-15T17:10:04.706151Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:10:04.706340Z","level":"info","event":"✅ Success: Saved 63 completely NEW jobs to the Bronze layer.","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:10:04.712510Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

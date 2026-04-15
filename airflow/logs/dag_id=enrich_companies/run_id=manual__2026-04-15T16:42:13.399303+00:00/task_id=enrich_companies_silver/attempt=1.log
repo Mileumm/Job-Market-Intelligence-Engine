@@ -1,0 +1,202 @@
+{"timestamp":"2026-04-15T16:42:14.031273Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 1389. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-15T16:42:14.044808Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-15T16:42:14.045568Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-15T16:42:17.160785Z","level":"info","event":"Starting Batch Company Enrichment (Silver Layer)...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:17.266250Z","level":"info","event":"Found 158 unique companies in the database.","logger":"root","filename":"bronze_raw.py","lineno":374}
+{"timestamp":"2026-04-15T16:42:17.277158Z","level":"info","event":"INFO - Gathering data for: Talan","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:20.134659Z","level":"info","event":"INFO - Gathering data for: JCDecaux","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:22.999852Z","level":"info","event":"INFO - Gathering data for: EDF","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:25.475798Z","level":"info","event":"INFO - Gathering data for: Alpine","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:28.053822Z","level":"info","event":"INFO - Gathering data for: DRIVECO","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:30.584735Z","level":"info","event":"INFO - Gathering data for: Marine Nationale","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:34.282539Z","level":"info","event":"INFO - Gathering data for: Nūmi®","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:36.559762Z","level":"info","event":"INFO - Gathering data for: Veepee","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:39.180574Z","level":"info","event":"INFO - Gathering data for: Rothschild & Co","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:41.578238Z","level":"info","event":"INFO - Gathering data for: Algolia","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:44.351076Z","level":"info","event":"INFO - Gathering data for: Homerez","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:46.755970Z","level":"info","event":"INFO - Gathering data for: Joko","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:50.552931Z","level":"info","event":"INFO - Gathering data for: Bigblue","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:53.006023Z","level":"info","event":"INFO - Gathering data for: Hermès","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:55.237558Z","level":"info","event":"INFO - Gathering data for: CANAL+ Group","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:42:57.852971Z","level":"info","event":"INFO - Gathering data for: Keyrus","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:00.411209Z","level":"info","event":"INFO - Gathering data for: Groupe Zephyr","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:03.437576Z","level":"info","event":"INFO - Gathering data for: Meilleurtaux","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:05.875278Z","level":"info","event":"INFO - Gathering data for: Wink","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:08.384870Z","level":"info","event":"INFO - Gathering data for: Groupe BPCE","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:10.876075Z","level":"info","event":"INFO - Gathering data for: 24S","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:13.533372Z","level":"info","event":"INFO - Gathering data for: Scalian","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:15.975256Z","level":"info","event":"INFO - Gathering data for: Arago","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:26.488740Z","level":"warning","event":"Failed to scrape https://www.aragon.es: HTTPSConnectionPool(host='www.aragon.es', port=443): Read timed out. (read timeout=10)","logger":"root","filename":"company_enrichment.py","lineno":90}
+{"timestamp":"2026-04-15T16:43:28.494640Z","level":"info","event":"INFO - Gathering data for: HelloFresh","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:30.863178Z","level":"info","event":"INFO - Gathering data for: Shift Technology","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:33.190191Z","level":"info","event":"INFO - Gathering data for: Eli Lilly and Company","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:35.470487Z","level":"info","event":"INFO - Gathering data for: CELINE","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:38.324593Z","level":"info","event":"INFO - Gathering data for: Cartier","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:41.442004Z","level":"info","event":"INFO - Gathering data for: bsport","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:45.342198Z","level":"info","event":"INFO - Gathering data for: AEROCONTACT","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:47.714270Z","level":"info","event":"INFO - Gathering data for: BNP Paribas Real Estate","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:50.208555Z","level":"info","event":"INFO - Gathering data for: Catalina Marketing France","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:52.507167Z","level":"info","event":"INFO - Gathering data for: Technip Energies","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:55.049308Z","level":"info","event":"INFO - Gathering data for: Crédit Agricole Personal Finance & Mobility","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:57.429643Z","level":"info","event":"INFO - Gathering data for: Christian Dior Couture","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:43:59.970152Z","level":"info","event":"INFO - Gathering data for: Vie De Comptable by HappyCab","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:02.261568Z","level":"info","event":"INFO - Gathering data for: GitGuardian","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:04.938771Z","level":"info","event":"INFO - Gathering data for: Advenworks","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:13.889667Z","level":"info","event":"INFO - Gathering data for: TotalEnergies","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:16.279238Z","level":"info","event":"INFO - Gathering data for: LEO Pharma France","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:18.574532Z","level":"info","event":"INFO - Gathering data for: Talan - France","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:20.851370Z","level":"info","event":"INFO - Gathering data for: SAP","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:23.061042Z","level":"info","event":"INFO - Gathering data for: Schneider Electric","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:26.380136Z","level":"info","event":"INFO - Gathering data for: Emerton","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:29.470386Z","level":"info","event":"INFO - Gathering data for: Square Management","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:32.010306Z","level":"info","event":"INFO - Gathering data for: Coca-Cola Europacific Partners","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:34.573262Z","level":"info","event":"INFO - Gathering data for: Spendesk","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:37.424402Z","level":"info","event":"INFO - Gathering data for: CNP Assurances","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:39.730998Z","level":"info","event":"INFO - Gathering data for: Renault Digital","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:40.057884Z","level":"warning","event":"Failed to scrape https://www.renault-digital.com: HTTPSConnectionPool(host='www.renault-digital.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.renault-digital.com', port=443): Failed to resolve 'www.renault-digital.com' ([Errno -2] Name or service not known)\"))","logger":"root","filename":"company_enrichment.py","lineno":90}
+{"timestamp":"2026-04-15T16:44:42.060300Z","level":"info","event":"INFO - Gathering data for: HyLight","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:44.778115Z","level":"info","event":"INFO - Gathering data for: Tenth Revolution Group","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:47.132628Z","level":"info","event":"INFO - Gathering data for: Ampere","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:49.682698Z","level":"info","event":"INFO - Gathering data for: Air Liquide","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:51.992322Z","level":"info","event":"INFO - Gathering data for: EGIDE","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:52.400400Z","level":"warning","event":"Failed to scrape https://www.egide-paris.com: HTTPSConnectionPool(host='www.egide-paris.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)')))","logger":"root","filename":"company_enrichment.py","lineno":90}
+{"timestamp":"2026-04-15T16:44:54.405401Z","level":"info","event":"INFO - Gathering data for: Ledger","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:56.887334Z","level":"info","event":"INFO - Gathering data for: Coface","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:44:59.415074Z","level":"info","event":"INFO - Gathering data for: Ubisoft","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:02.769524Z","level":"info","event":"INFO - Gathering data for: Salute","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:05.249708Z","level":"info","event":"INFO - Gathering data for: Amazon Web Services (AWS)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:07.520805Z","level":"info","event":"INFO - Gathering data for: NEXTON","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:11.444421Z","level":"info","event":"INFO - Gathering data for: Swile","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:13.834019Z","level":"info","event":"INFO - Gathering data for: Servier France","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:17.826162Z","level":"info","event":"INFO - Gathering data for: Sia","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:20.537307Z","level":"info","event":"INFO - Gathering data for: Criteo","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:22.926226Z","level":"info","event":"INFO - Gathering data for: MERITIS","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:27.364305Z","level":"info","event":"INFO - Gathering data for: Pennylane","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:30.333801Z","level":"info","event":"INFO - Gathering data for: Converteo","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:33.540096Z","level":"info","event":"INFO - Gathering data for: papernest","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:35.893230Z","level":"info","event":"INFO - Gathering data for: Affluences","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:38.694605Z","level":"info","event":"INFO - Gathering data for: Carrefour","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:40.963170Z","level":"info","event":"INFO - Gathering data for: QUANTEAM (RAINBOW PARTNERS Group)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:43.278888Z","level":"info","event":"INFO - Gathering data for: Metreecs (YC F24)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:45.586756Z","level":"info","event":"INFO - Gathering data for: Expectra","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:49.000476Z","level":"info","event":"INFO - Gathering data for: ekino","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:52.280583Z","level":"info","event":"INFO - Gathering data for: amo","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:45:55.269985Z","level":"info","event":"INFO - Gathering data for: °Arcane","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:00.024669Z","level":"info","event":"INFO - Gathering data for: Malt","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:03.451977Z","level":"info","event":"INFO - Gathering data for: Teads","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:05.965001Z","level":"info","event":"INFO - Gathering data for: Boursorama","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:08.560575Z","level":"info","event":"INFO - Gathering data for: Naboo","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:18.727721Z","level":"warning","event":"Failed to scrape https://www.naboodame.com: HTTPSConnectionPool(host='www.naboodame.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.naboodame.com', port=443) at 0xffff56a35490>, 'Connection to www.naboodame.com timed out. (connect timeout=10)'))","logger":"root","filename":"company_enrichment.py","lineno":90}
+{"timestamp":"2026-04-15T16:46:20.731040Z","level":"info","event":"INFO - Gathering data for: Gecina","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:23.323387Z","level":"info","event":"INFO - Gathering data for: WOLD","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:27.291028Z","level":"info","event":"INFO - Gathering data for: Algoan","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:29.796647Z","level":"info","event":"INFO - Gathering data for: Novartis","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:32.152713Z","level":"info","event":"INFO - Gathering data for: Ankorstore","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:34.932222Z","level":"info","event":"INFO - Gathering data for: Bouygues Group","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:38.803160Z","level":"info","event":"INFO - Gathering data for: Liora","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:39.264109Z","level":"warning","event":"Failed to scrape https://www.armiev.com: HTTPSConnectionPool(host='www.armiev.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)')))","logger":"root","filename":"company_enrichment.py","lineno":90}
+{"timestamp":"2026-04-15T16:46:41.265752Z","level":"info","event":"INFO - Gathering data for: Institut F2I","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:43.747284Z","level":"info","event":"INFO - Gathering data for: Rakuten Advertising","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:46.403935Z","level":"info","event":"INFO - Gathering data for: Alpic","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:50.891793Z","level":"info","event":"INFO - Gathering data for: GROUPE M6","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:53.587164Z","level":"info","event":"INFO - Gathering data for: Direct Assurance","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:56.348300Z","level":"info","event":"INFO - Gathering data for: Bending Spoons","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:46:58.918059Z","level":"info","event":"INFO - Gathering data for: Transdev","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:02.555144Z","level":"info","event":"INFO - Gathering data for: Volkswagen Financial Services","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:05.733294Z","level":"info","event":"INFO - Gathering data for: Equancy | Groupe EDG","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:08.017512Z","level":"info","event":"INFO - Gathering data for: Ekimetrics","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:10.539327Z","level":"info","event":"INFO - Gathering data for: Scal-e","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:13.117981Z","level":"info","event":"INFO - Gathering data for: Vizzia","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:19.142070Z","level":"info","event":"INFO - Gathering data for: Deezer","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:21.960424Z","level":"info","event":"INFO - Gathering data for: Mirakl","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:24.599926Z","level":"info","event":"INFO - Gathering data for: Visian","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:27.078783Z","level":"info","event":"INFO - Gathering data for: JAKALA","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:29.580345Z","level":"info","event":"INFO - Gathering data for: Allianz France","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:31.862622Z","level":"info","event":"INFO - Gathering data for: Alibaba Cloud","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:34.993677Z","level":"info","event":"INFO - Gathering data for: OpenClassrooms","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:37.591486Z","level":"info","event":"INFO - Gathering data for: Nestlé","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:39.826312Z","level":"info","event":"INFO - Gathering data for: Alice & Bob","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:42.967883Z","level":"info","event":"INFO - Gathering data for: BSD Business Solutions & Data","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:45.275125Z","level":"info","event":"INFO - Gathering data for: MP DATA","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:47.886025Z","level":"info","event":"INFO - Gathering data for: Outsight","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:50.757555Z","level":"info","event":"INFO - Gathering data for: LineUP7","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:53.006059Z","level":"info","event":"INFO - Gathering data for: Viridien","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:47:53.837650Z","level":"warning","event":"Failed to scrape https://www.viridienergy.com: HTTPSConnectionPool(host='www.viridienergy.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.viridienergy.com'. (_ssl.c:1010)\")))","logger":"root","filename":"company_enrichment.py","lineno":90}
+{"timestamp":"2026-04-15T16:47:55.842559Z","level":"info","event":"INFO - Gathering data for: Free2move","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:00.259790Z","level":"info","event":"INFO - Gathering data for: Hiboo","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:04.148496Z","level":"info","event":"INFO - Gathering data for: Sabena technics","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:06.691449Z","level":"info","event":"INFO - Gathering data for: Danone","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:08.970677Z","level":"info","event":"INFO - Gathering data for: Novaspace","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:13.376489Z","level":"info","event":"INFO - Gathering data for: Groupe iliad","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:13.735785Z","level":"warning","event":"Failed to scrape https://www.groupe-iliade.fr: HTTPSConnectionPool(host='www.groupe-iliade.fr', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.groupe-iliade.fr', port=443): Failed to resolve 'www.groupe-iliade.fr' ([Errno -2] Name or service not known)\"))","logger":"root","filename":"company_enrichment.py","lineno":90}
+{"timestamp":"2026-04-15T16:48:15.739165Z","level":"info","event":"INFO - Gathering data for: Adikteev","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:18.268372Z","level":"info","event":"INFO - Gathering data for: Aigle","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:21.540238Z","level":"info","event":"INFO - Gathering data for: AI Builders","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:25.596151Z","level":"info","event":"INFO - Gathering data for: Doctolib","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:28.259853Z","level":"info","event":"INFO - Gathering data for: Ivalua","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:30.882187Z","level":"info","event":"INFO - Gathering data for: Valeo","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:34.359179Z","level":"info","event":"INFO - Gathering data for: QuantumBlack, AI by McKinsey","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:36.650427Z","level":"info","event":"INFO - Gathering data for: Natixis Corporate & Investment Banking","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:39.012128Z","level":"info","event":"INFO - Gathering data for: Artefact","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:41.692686Z","level":"info","event":"INFO - Gathering data for: Equans France","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:44.292874Z","level":"info","event":"INFO - Gathering data for: LECLERC LE POIRE SUR VIE","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:46.593248Z","level":"info","event":"INFO - Gathering data for: Catalina Marketing Costa Rica","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:49.219408Z","level":"info","event":"INFO - Gathering data for: STATION F","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:52.027800Z","level":"info","event":"INFO - Gathering data for: RIMOWA","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:48:55.076715Z","level":"info","event":"INFO - Gathering data for: Beamy","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:49:02.381409Z","level":"info","event":"INFO - Gathering data for: ENGIE - International Supply & Energy Management","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:49:04.699832Z","level":"info","event":"INFO - Gathering data for: Societe Generale","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:49:07.004689Z","level":"info","event":"INFO - Gathering data for: EIC - Experience Internship Canada","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:49:09.293939Z","level":"info","event":"INFO - Gathering data for: AXA Group Operations","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:49:11.564026Z","level":"info","event":"INFO - Gathering data for: Le Monde","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:49:14.225634Z","level":"info","event":"INFO - Gathering data for: Trekea Mobile","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:49:16.499867Z","level":"info","event":"Found 140 companies to enrich. Starting AI batches...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:49:16.502942Z","level":"info","event":"Processing company batch 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:49:16.522340Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:49:16.530425Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:49:53.818470Z","level":"info","event":"Processing company batch 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:49:53.819870Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:49:53.821290Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:50:25.582120Z","level":"info","event":"Processing company batch 3...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:50:25.585291Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:50:25.586519Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:50:58.027191Z","level":"info","event":"Processing company batch 4...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:50:58.030831Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:50:58.033673Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:51:39.832565Z","level":"info","event":"Processing company batch 5...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:51:39.835568Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:51:39.837328Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:52:27.765532Z","level":"info","event":"Processing company batch 6...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:52:27.768847Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:52:27.770629Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:53:15.168790Z","level":"info","event":"Processing company batch 7...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:53:15.169909Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:53:15.171510Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:53:49.789048Z","level":"info","event":"Processing company batch 8...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:53:49.790617Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:53:49.791785Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:53:49.866740Z","level":"warning","event":"⚠️ gemini-3-flash-preview quota exhausted! Switching to next model fallback...","logger":"root","filename":"company_enrichment.py","lineno":133}
+{"timestamp":"2026-04-15T16:53:51.868317Z","level":"info","event":"🧠 Asking gemini-2.5-flash to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:53:51.869212Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:55:11.375527Z","level":"error","event":"❌ API Exception with gemini-2.5-flash: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}. Shifting models...","logger":"root","filename":"company_enrichment.py","lineno":135}
+{"timestamp":"2026-04-15T16:55:13.378273Z","level":"info","event":"🧠 Asking gemini-3.1-flash-lite to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:55:13.378762Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:55:13.461424Z","level":"error","event":"❌ API Exception with gemini-3.1-flash-lite: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3.1-flash-lite is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}. Shifting models...","logger":"root","filename":"company_enrichment.py","lineno":135}
+{"timestamp":"2026-04-15T16:55:15.463457Z","level":"info","event":"🧠 Asking gemini-2.5-flash-lite to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:55:15.464048Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:55:27.042329Z","level":"info","event":"Processing company batch 9...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:55:27.045425Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:55:27.046642Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:55:27.239514Z","level":"warning","event":"⚠️ gemini-3-flash-preview quota exhausted! Switching to next model fallback...","logger":"root","filename":"company_enrichment.py","lineno":133}
+{"timestamp":"2026-04-15T16:55:29.239967Z","level":"info","event":"🧠 Asking gemini-2.5-flash to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:55:29.240465Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:58:52.625962Z","level":"info","event":"Processing company batch 10...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:58:52.624029Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 5 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:58:52.625737Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:58:52.810914Z","level":"warning","event":"⚠️ gemini-3-flash-preview quota exhausted! Switching to next model fallback...","logger":"root","filename":"company_enrichment.py","lineno":133}
+{"timestamp":"2026-04-15T16:58:54.818650Z","level":"info","event":"🧠 Asking gemini-2.5-flash to process batch of 5 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T16:58:54.820796Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T16:59:14.126159Z","level":"info","event":"Saving 140 newly enriched companies...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T16:59:14.161249Z","level":"info","event":"Saving 158 enriched companies to the Silver database...","logger":"root","filename":"bronze_raw.py","lineno":307}
+{"timestamp":"2026-04-15T16:59:15.017484Z","level":"info","event":"Silver layer successfully updated! ✅","logger":"root","filename":"bronze_raw.py","lineno":314}
+{"timestamp":"2026-04-15T16:59:15.023120Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

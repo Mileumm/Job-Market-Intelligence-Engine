@@ -19,9 +19,17 @@ def setup_db_task():
     db = DatabaseManager()
     print("Database connection verified.")
 
-def fetch_and_load_bronze_task():
+def fetch_and_load_bronze_task(**kwargs):
     """Scrapes job data, skipping known jobs, searching until it finds 50 NEW ones per query."""
-    search_queries = ["Data Engineer", "Ingénieur de données", "Data Architect"]
+    
+    # Extract external parameters if triggered manually by Streamlit
+    dag_run = kwargs.get('dag_run')
+    conf = dag_run.conf if dag_run else {}
+    
+    # Defaults ensure backward compatibility for scheduled autonomous runs
+    location = conf.get("location", "Quebec, Canada")
+    search_queries = conf.get("level_queries", ["Data Engineer", "Ingénieur de données", "Data Architect"])
+    
     scraper = LinkedInScraper()
     db = DatabaseManager()
     
@@ -31,7 +39,7 @@ def fetch_and_load_bronze_task():
     all_new_jobs = []
     
     for query in search_queries:
-        print(f"\n--- Fetching new jobs for: {query} ---")
+        print(f"\n--- Fetching new jobs for: '{query}' in '{location}' ---")
         new_jobs_for_query = 0
         page_start = 0
         max_pages = 10 
@@ -39,8 +47,8 @@ def fetch_and_load_bronze_task():
         while new_jobs_for_query < 50 and page_start < (max_pages * 25):
             print(f"Scanning page {page_start//25 + 1}...")
             
-            # 1. Fetch the raw page blindly
-            raw_batch = scraper.fetch_quebec_jobs(keywords=query, start=page_start)
+            # 1. Fetch the raw page blindly, passing the dynamic location
+            raw_batch = scraper.fetch_quebec_jobs(keywords=query, location=location, start=page_start)
             
             # 2. If LinkedIn literally returns 0 cards, we hit the end of the search results
             if not raw_batch:

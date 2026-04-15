@@ -1,0 +1,13 @@
+{"timestamp":"2026-04-15T15:09:07.985670Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 185. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-15T15:09:08.091925Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-15T15:09:08.093940Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-15T15:09:17.228402Z","level":"info","event":"Starting Batch Job-Level AI Enrichment...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T15:09:17.670072Z","level":"info","event":"Found 38 jobs requiring AI analysis. Processing in batches...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T15:09:17.682894Z","level":"info","event":"Processing batch 1 (Jobs 1 to 30)...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T15:09:17.678839Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 30 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T15:09:17.679542Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T15:10:55.756162Z","level":"info","event":"Processing batch 2 (Jobs 31 to 38)...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T15:10:55.757487Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 8 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T15:10:55.761879Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T15:18:02.053552Z","level":"info","event":"Job-Level Enrichment Complete.","logger":"task.stdout"}
+{"timestamp":"2026-04-15T15:18:02.072217Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
