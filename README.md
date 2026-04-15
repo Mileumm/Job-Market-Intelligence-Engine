@@ -62,6 +62,28 @@ models_to_try = [
 
 ---
 
+## Installation & Setup
+
+If you want to run this project locally, you will need to provision the Gemini API key (it has a generous free tier!).
+
+1. **Configure Environment Variables:**
+   * Copy the provided `.env.example` file and rename it to `.env`.
+   * **Gemini API:** Create a free API key at [Google AI Studio](https://aistudio.google.com/app/apikey) and assign it to `GEMINI_API_KEY`.
+
+2. **Launch the Containerized Environment:**
+   Ensure Docker is running, then execute:
+   ```bash
+   docker compose up -d --build
+   ```
+
+3. **Access the Interfaces:**
+   Once the containers are spinning, you can monitor and explore the data directly in your browser:
+   * **🚀 Streamlit Dashboard (Data Analytics):** [http://localhost:8501](http://localhost:8501)
+   * **⚙️ Apache Airflow (DAG Orchestration):** [http://localhost:8080](http://localhost:8080)
+     *(Default Login: Use `airflow` for both username and password)*
+
+---
+
 ## Infrastructure
 The entire environment is containerized using **Docker** and **Docker Compose**, ensuring "Write Once, Run Anywhere" portability.
 

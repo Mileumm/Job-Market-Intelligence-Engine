@@ -1,7 +1,0 @@
-{"timestamp":"2026-04-01T18:17:34.807575Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 314. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
-{"timestamp":"2026-04-01T18:17:34.817873Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
-{"timestamp":"2026-04-01T18:17:34.818626Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
-{"timestamp":"2026-04-01T18:17:36.329247Z","level":"info","event":"Starting Job Description enrichment process...","logger":"task.stdout"}
-{"timestamp":"2026-04-01T18:17:36.379885Z","level":"info","event":"No pending descriptions to fetch.","logger":"task.stdout"}
-{"timestamp":"2026-04-01T18:17:36.383597Z","level":"info","event":"Job Description enrichment complete.","logger":"task.stdout"}
-{"timestamp":"2026-04-01T18:17:36.385100Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

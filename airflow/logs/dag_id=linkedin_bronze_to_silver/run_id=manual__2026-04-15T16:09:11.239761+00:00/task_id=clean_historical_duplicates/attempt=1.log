@@ -1,6 +1,0 @@
-{"timestamp":"2026-04-15T16:39:07.295051Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 1354. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
-{"timestamp":"2026-04-15T16:39:07.309071Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
-{"timestamp":"2026-04-15T16:39:07.310036Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
-{"timestamp":"2026-04-15T16:39:09.298754Z","level":"info","event":"Starting Database Cleanup (Soft Delete)...","logger":"task.stdout"}
-{"timestamp":"2026-04-15T16:39:09.316940Z","level":"info","event":"🧹 Successfully deactivated 8 duplicate jobs. Historical memory preserved!","logger":"task.stdout"}
-{"timestamp":"2026-04-15T16:39:09.317778Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

@@ -1,6 +1,0 @@
-{"timestamp":"2026-04-01T09:23:37.874064Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 6388. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
-{"timestamp":"2026-04-01T09:23:37.882126Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
-{"timestamp":"2026-04-01T09:23:37.882804Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
-{"timestamp":"2026-04-01T09:23:39.024141Z","level":"info","event":"Generating interactive profile dashboard...","logger":"task.stdout"}
-{"timestamp":"2026-04-01T09:23:39.048336Z","level":"info","event":"✅ Dashboard successfully generated at: /opt/airflow/dags/job_market_dashboard.html","logger":"task.stdout"}
-{"timestamp":"2026-04-01T09:23:39.048662Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
