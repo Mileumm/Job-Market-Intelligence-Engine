@@ -57,3 +57,15 @@
 {"timestamp":"2026-04-15T17:18:00.869941Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/software-enginee...","logger":"root","filename":"bronze_raw.py","lineno":212}
 {"timestamp":"2026-04-15T17:18:08.056665Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/intern-software-...","logger":"root","filename":"bronze_raw.py","lineno":212}
 {"timestamp":"2026-04-15T17:18:20.672988Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/data-engineer-at...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:18:32.562861Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/graduate-ai-soft...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:18:44.046872Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/graduate-softwar...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:18:56.542812Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/data-engineer-%E...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:19:06.103539Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/alternance-softw...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:19:18.611813Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/alternant-e-inge...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:19:31.282661Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/stage-d%C3%A9vel...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:19:43.320351Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/stage-analyste-d...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:19:51.234585Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/alternance-ing%C...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:20:01.192924Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/alternance-ing%C...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:20:12.301478Z","level":"info","event":"Fetching description for: https://fr.linkedin.com/jobs/view/data-modeler-et-...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T17:20:20.704581Z","level":"info","event":"Job Description enrichment complete.","logger":"task.stdout"}
+{"timestamp":"2026-04-15T17:20:20.711964Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
