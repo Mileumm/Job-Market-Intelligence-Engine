@@ -1,0 +1,57 @@
+{"timestamp":"2026-04-15T14:36:13.638036Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 431. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-15T14:36:13.656145Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-15T14:36:13.657157Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-15T14:36:15.717165Z","level":"info","event":"Starting Batch Company Enrichment (Silver Layer)...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:15.814372Z","level":"info","event":"Found 18 unique companies in the database.","logger":"root","filename":"bronze_raw.py","lineno":374}
+{"timestamp":"2026-04-15T14:36:15.819827Z","level":"info","event":"Silver table does not exist yet. Proceeding with all companies.","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:15.820049Z","level":"info","event":"INFO - Gathering data for: Lambda","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:18.668725Z","level":"info","event":"INFO - Gathering data for: PMP SOLUTIONS","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:24.204496Z","level":"info","event":"INFO - Gathering data for: KPMG Canada","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:26.524541Z","level":"info","event":"INFO - Gathering data for: Co-operators","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:30.258500Z","level":"info","event":"INFO - Gathering data for: Bentley Systems","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:32.954043Z","level":"info","event":"INFO - Gathering data for: Fivetran","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:35.256771Z","level":"info","event":"INFO - Gathering data for: Desjardins","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:37.745754Z","level":"info","event":"INFO - Gathering data for: AECOM","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:40.655779Z","level":"info","event":"INFO - Gathering data for: Astek","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:43.336628Z","level":"info","event":"INFO - Gathering data for: GoTo","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:45.973172Z","level":"info","event":"INFO - Gathering data for: TEHORA inc.","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:48.079220Z","level":"info","event":"INFO - Gathering data for: Hewlett Packard Enterprise","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:50.421128Z","level":"info","event":"INFO - Gathering data for: Rollstack","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:52.787985Z","level":"info","event":"INFO - Gathering data for: AtkinsRéalis","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:55.804013Z","level":"info","event":"INFO - Gathering data for: Launch Potato","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:36:59.096207Z","level":"info","event":"INFO - Gathering data for: Kinaxis","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:37:02.646147Z","level":"info","event":"INFO - Gathering data for: SUSE","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:37:06.309036Z","level":"info","event":"INFO - Gathering data for: HumanSignal","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:37:09.063357Z","level":"info","event":"Found 18 companies to enrich. Starting AI batches...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:37:09.063699Z","level":"info","event":"Processing company batch 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:37:09.064969Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T14:37:09.065903Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T14:37:09.517928Z","level":"error","event":"❌ API Exception with gemini-3-flash-preview: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}. Shifting models...","logger":"root","filename":"company_enrichment.py","lineno":135}
+{"timestamp":"2026-04-15T14:37:11.523414Z","level":"info","event":"🧠 Asking gemini-2.5-flash to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T14:37:11.524049Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T14:37:11.820469Z","level":"error","event":"❌ API Exception with gemini-2.5-flash: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}. Shifting models...","logger":"root","filename":"company_enrichment.py","lineno":135}
+{"timestamp":"2026-04-15T14:37:13.822497Z","level":"info","event":"🧠 Asking gemini-3.1-flash-lite to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T14:37:13.822733Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T14:37:13.881724Z","level":"error","event":"❌ API Exception with gemini-3.1-flash-lite: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3.1-flash-lite is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}. Shifting models...","logger":"root","filename":"company_enrichment.py","lineno":135}
+{"timestamp":"2026-04-15T14:37:15.883234Z","level":"info","event":"🧠 Asking gemini-2.5-flash-lite to process batch of 15 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T14:37:15.883536Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T14:37:16.187855Z","level":"error","event":"❌ API Exception with gemini-2.5-flash-lite: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}. Shifting models...","logger":"root","filename":"company_enrichment.py","lineno":135}
+{"timestamp":"2026-04-15T14:37:18.194179Z","level":"error","event":"❌ CRITICAL: All fallback models failed for this batch sequence.","logger":"root","filename":"company_enrichment.py","lineno":141}
+{"timestamp":"2026-04-15T14:37:22.196546Z","level":"info","event":"Processing company batch 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:37:22.199511Z","level":"info","event":"🧠 Asking gemini-3-flash-preview to process batch of 3 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T14:37:22.201631Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T14:37:22.527864Z","level":"error","event":"❌ API Exception with gemini-3-flash-preview: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}. Shifting models...","logger":"root","filename":"company_enrichment.py","lineno":135}
+{"timestamp":"2026-04-15T14:37:24.533160Z","level":"info","event":"🧠 Asking gemini-2.5-flash to process batch of 3 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T14:37:24.533649Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T14:37:24.827433Z","level":"error","event":"❌ API Exception with gemini-2.5-flash: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}. Shifting models...","logger":"root","filename":"company_enrichment.py","lineno":135}
+{"timestamp":"2026-04-15T14:37:26.829654Z","level":"info","event":"🧠 Asking gemini-3.1-flash-lite to process batch of 3 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T14:37:26.829849Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T14:37:26.878564Z","level":"error","event":"❌ API Exception with gemini-3.1-flash-lite: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3.1-flash-lite is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}. Shifting models...","logger":"root","filename":"company_enrichment.py","lineno":135}
+{"timestamp":"2026-04-15T14:37:28.884267Z","level":"info","event":"🧠 Asking gemini-2.5-flash-lite to process batch of 3 items...","logger":"root","filename":"company_enrichment.py","lineno":111}
+{"timestamp":"2026-04-15T14:37:28.885389Z","level":"info","event":"AFC is enabled with max remote calls: 10.","logger":"google_genai.models","filename":"models.py","lineno":5701}
+{"timestamp":"2026-04-15T14:37:29.195713Z","level":"error","event":"❌ API Exception with gemini-2.5-flash-lite: 403 PERMISSION_DENIED. {'error': {'code': 403, 'message': 'Your API key was reported as leaked. Please use another API key.', 'status': 'PERMISSION_DENIED'}}. Shifting models...","logger":"root","filename":"company_enrichment.py","lineno":135}
+{"timestamp":"2026-04-15T14:37:31.198650Z","level":"error","event":"❌ CRITICAL: All fallback models failed for this batch sequence.","logger":"root","filename":"company_enrichment.py","lineno":141}
+{"timestamp":"2026-04-15T14:37:35.200864Z","level":"info","event":"Saving 18 newly enriched companies...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:37:35.232469Z","level":"info","event":"Saving 18 enriched companies to the Silver database...","logger":"root","filename":"bronze_raw.py","lineno":307}
+{"timestamp":"2026-04-15T14:37:35.269952Z","level":"info","event":"Silver layer successfully updated! ✅","logger":"root","filename":"bronze_raw.py","lineno":314}
+{"timestamp":"2026-04-15T14:37:35.275705Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

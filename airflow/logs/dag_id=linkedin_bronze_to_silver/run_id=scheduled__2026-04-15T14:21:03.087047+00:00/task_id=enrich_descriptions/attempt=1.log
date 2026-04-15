@@ -1,0 +1,47 @@
+{"timestamp":"2026-04-15T14:21:55.435784Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 244. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-15T14:21:55.445842Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-15T14:21:55.447963Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-15T14:21:56.805894Z","level":"info","event":"Starting Job Description enrichment process...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:56.817855Z","level":"info","event":"Starting enrichment for 40 jobs...","logger":"root","filename":"bronze_raw.py","lineno":207}
+{"timestamp":"2026-04-15T14:21:56.818074Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/senior-data-engi...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:28:41.012540Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/senior-data-engi...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:28:52.397346Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/programming-soft...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:29:00.930662Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/lead-data-engine...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:29:09.825412Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/software-enginee...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:29:20.916384Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-center-oper...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:29:30.817606Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/senior-data-cent...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:29:44.203295Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-collector-c...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:29:54.940350Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/software-enginee...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:30:06.382732Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-program...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:30:19.181885Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-en-gouv...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:30:25.856387Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-en-gouv...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:30:35.767060Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/analyste-fonctio...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:30:45.612208Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-center-oper...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:30:53.657351Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/technician-%E2%8...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:31:02.337941Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/civil-engineerin...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:31:13.029297Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/electrical-road-...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:31:23.799668Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieur-e...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:31:35.123962Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieur-e...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:31:47.509629Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/building-electri...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:31:54.151739Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/scientifique-de-...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:32:05.820764Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieur-e...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:32:13.009746Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-governance-...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:32:20.326199Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-governance-...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:32:28.734685Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/technicien-valid...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:32:37.367149Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/it-architect-at-...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:32:45.100911Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/d%C3%A9veloppeur...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:32:55.901022Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/d%C3%A9veloppeur...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:33:03.836546Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/d%C3%A9veloppeur...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:33:18.185787Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/scientifique-de-...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:33:26.763644Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/expert-en-scienc...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:33:37.533020Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieur-e...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:33:45.084573Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ing%C3%A9nieur-c...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:33:53.672728Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/data-analytics-a...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:34:04.549711Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/architecte-analy...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:34:16.505114Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/solution-archite...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:34:28.555360Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/ai-architect-at-...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:34:38.777559Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/platform-archite...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:34:49.547852Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/platform-archite...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:34:59.651259Z","level":"info","event":"Fetching description for: https://ca.linkedin.com/jobs/view/architecte-de-so...","logger":"root","filename":"bronze_raw.py","lineno":212}
+{"timestamp":"2026-04-15T14:35:05.784821Z","level":"info","event":"Job Description enrichment complete.","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:35:05.789156Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}

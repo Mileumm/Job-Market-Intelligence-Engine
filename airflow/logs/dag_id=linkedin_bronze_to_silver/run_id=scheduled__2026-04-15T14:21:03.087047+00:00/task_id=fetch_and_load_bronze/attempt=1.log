@@ -1,0 +1,31 @@
+{"timestamp":"2026-04-15T14:21:17.677991Z","level":"info","event":"Stats instance was created in PID 7 but accessed in PID 233. Re-initializing.","logger":"airflow.stats","filename":"stats.py","lineno":57}
+{"timestamp":"2026-04-15T14:21:17.754840Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2026-04-15T14:21:17.756362Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/linkedin_pipeline.py","logger":"airflow.models.dagbag.BundleDagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2026-04-15T14:21:20.420327Z","level":"warning","event":"Could not construct link lookup table (DB likely empty): (psycopg2.errors.UndefinedTable) relation \"raw_jobs\" does not exist\nLINE 1: SELECT link FROM raw_jobs;\n                         ^\n\n[SQL: SELECT link FROM raw_jobs;]\n(Background on this error at: https://sqlalche.me/e/20/f405)","logger":"root","filename":"bronze_raw.py","lineno":391}
+{"timestamp":"2026-04-15T14:21:20.421659Z","level":"info","event":"Loaded 0 existing jobs from the database.","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:20.421986Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:20.422353Z","level":"info","event":"--- Fetching new jobs for: Data Engineer ---","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:20.422952Z","level":"info","event":"Scanning page 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:21.015970Z","level":"info","event":"  -> Page 1 had 10 NEW jobs. (Total for query: 10/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:25.018783Z","level":"info","event":"Scanning page 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:25.712830Z","level":"info","event":"  -> Page 2 had 10 NEW jobs. (Total for query: 20/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:33.692487Z","level":"info","event":"Scanning page 3...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:34.062720Z","level":"info","event":"No more jobs found on LinkedIn for this query (End of results).","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:34.063174Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:34.063469Z","level":"info","event":"--- Fetching new jobs for: Ingénieur de données ---","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:34.064346Z","level":"info","event":"Scanning page 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:34.679930Z","level":"info","event":"  -> Page 1 had 5 NEW jobs. (Total for query: 5/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:40.306743Z","level":"info","event":"Scanning page 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:40.915561Z","level":"info","event":"  -> Page 2 had 7 NEW jobs. (Total for query: 12/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:48.522569Z","level":"info","event":"Scanning page 3...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:49.009750Z","level":"info","event":"No more jobs found on LinkedIn for this query (End of results).","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:49.010002Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:49.010257Z","level":"info","event":"--- Fetching new jobs for: Data Architect ---","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:49.010580Z","level":"info","event":"Scanning page 1...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:49.552970Z","level":"info","event":"  -> Page 1 had 8 NEW jobs. (Total for query: 8/50)","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:54.214651Z","level":"info","event":"Scanning page 2...","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:54.608020Z","level":"info","event":"No more jobs found on LinkedIn for this query (End of results).","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:54.701161Z","level":"info","event":"Jobs successfully Upserted (Inserted or Updated) into Bronze layer.","logger":"root","filename":"bronze_raw.py","lineno":280}
+{"timestamp":"2026-04-15T14:21:54.702345Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:54.702510Z","level":"info","event":"✅ Success: Saved 40 completely NEW jobs to the Bronze layer.","logger":"task.stdout"}
+{"timestamp":"2026-04-15T14:21:54.713906Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":230}
