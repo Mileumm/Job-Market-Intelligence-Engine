@@ -1,104 +1,196 @@
-# AI-Powered Data Pipeline: Automated Job Market Intelligence
+# Job Market Data Pipeline — LinkedIn Scraping & AI Enrichment
 
-![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
-![Apache Airflow](https://img.shields.io/badge/Airflow-2.7+-017CEE.svg?logo=Apache%20Airflow)
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini-Enrichment-orange.svg)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Storage-336791.svg?logo=Postgresql)
-![Docker](https://img.shields.io/badge/Docker-Infrastructure-2496ED.svg?logo=Docker)
+![Python](https://img.shields.io/badge/python-3.11-blue.svg)
+![Apache Airflow](https://img.shields.io/badge/Airflow-3.1-017CEE.svg?logo=Apache%20Airflow)
+![Google Gemini](https://img.shields.io/badge/Google%20Gemini-API-orange.svg)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15%20%7C%2016-336791.svg?logo=Postgresql)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED.svg?logo=Docker)
 
 ## Project Overview
-An industrial-grade ETL pipeline designed to scrape, enrich, and analyze the job market landscape in real-time. By orchestrating **Apache Airflow**, **PostgreSQL**, and the **Google Gemini API**, this system transforms raw, unstructured LinkedIn data into structured business intelligence, featuring semantic analysis of company cultures and technical requirements.
+
+A batch ETL pipeline that scrapes LinkedIn job postings, enriches the data with AI-generated company profiles, and serves the results through two dashboards. The system is orchestrated by **Apache Airflow**, stores data in **PostgreSQL**, and uses the **Google Gemini API** for unstructured text analysis.
+
+**Target market:** Data engineering roles in Quebec, Canada (configurable via Streamlit UI).
+
+---
 
 ## Architecture & Pipeline Design
-The system follows a modular "Medallion Architecture" logic, ensuring data integrity and traceability at every stage:
 
-1.  **Extraction (Bronze Layer):**
-    *   Targeted scraping of LinkedIn job postings using multi-query logic.
-    *   Duplicate detection & "Soft-Delete" mechanism to preserve historical trends while maintaining a clean "Active" dataset.
-2.  **Enrichment (Silver Layer):**
-    *   **Semantic Scraping:** Automated discovery of official company websites via Clearbit/DuckDuckGo.
-    *   **IA Synthesis:** Deep-crawling of company "About Us" pages followed by Gemini-powered extraction of industry, tech team size, and public sentiment.
-3.  **Refinement (Gold Layer & Vis):**
-    *   Automatic extraction of Tech Stacks and Salary ranges from job descriptions using LLM batching.
-    *   Generation of a dynamic, interactive SPA (Single Page Application) dashboard for stakeholder exploration.
+The pipeline follows a **Medallion Architecture** (Bronze → Silver → Gold) with two Airflow DAGs running every 8 hours:
+
+```
+DAG 1: linkedin_bronze_to_silver              DAG 2: enrich_companies
+┌──────────────┐                              ┌───────────────────────┐
+│ Setup DB     │                              │ Enrich Companies      │
+│ (schema init)│                              │ (Clearbit + Gemini)   │
+└──────┬───────┘                              └───────────┬───────────┘
+       │                                                  │
+┌──────▼───────────────┐                      ┌───────────▼───────────┐
+│ Scrape LinkedIn      │                      │ Enrich Individual     │
+│ (multi-query, paged) │                      │ Jobs (tech stack,     │
+└──────┬───────────────┘                      │ salary via Gemini)    │
+       │                                      └───────────┬───────────┘
+┌──────▼───────────────┐                      ┌───────────▼───────────┐
+│ Enrich Descriptions  │                      │ Generate HTML         │
+│ (per-job scraping)   │                      │ Dashboard             │
+└──────┬───────────────┘                      └───────────────────────┘
+       │
+┌──────▼───────────────┐
+│ Deduplicate          │
+│ (soft-delete via     │
+│  window functions)   │
+└──────────────────────┘
+```
+
+### Bronze Layer (`bronze_raw.py`)
+- Scrapes LinkedIn's public guest job API with rotating User-Agent headers and configurable anti-ban delays.
+- Loads raw job postings into `raw_jobs` using a **temp-table + `ON CONFLICT` upsert** for idempotent writes.
+- Fetches individual job descriptions in a second pass for jobs where `description IS NULL`.
+- Deduplicates using SQL window functions (`ROW_NUMBER() OVER(PARTITION BY ...)`) with a **soft-delete** flag (`is_active`) to preserve historical data.
+
+### Silver Layer (`company_enrichment.py`)
+- Resolves official company domains via the **Clearbit Autocomplete API**.
+- Scrapes and cleans corporate website text (strips `<script>`, `<nav>`, `<footer>` tags, truncates to 4000 chars).
+- Sends batches of company data to **Google Gemini** for structured extraction: industry classification, company size estimation, tech team size, and a sentiment summary.
+- Extracts **tech stacks** and **salary ranges** from job descriptions via a separate Gemini batch call.
+
+### Visualization
+- **Static HTML Dashboard:** A generated SPA (served via Nginx) with company profiles, job cards, and client-side filtering by skill, workplace type, and salary disclosure.
+- **Streamlit Dashboard:** A live, interactive interface connected to PostgreSQL with sidebar filters (skill, location, job category, experience level, workplace type). Includes a button to **trigger Airflow DAGs** via the REST API directly from the UI.
 
 ---
 
-## Technical Reflections & Strategic Choices
+## Key Technical Decisions
 
-### Why Apache Airflow?
-While simple cron scripts are sufficient for basic automation, this project demands a robust orchestration layer. Airflow was selected for:
-*   **Directed Acyclic Graphs (DAGs):** Clear visualization of complex dependencies between extraction and AI enrichment.
-*   **Retry Logic:** Mission-critical when dealing with external API rate limits and web scraping volatility.
-*   **Scalability:** The ability to parallelize tasks and manage long-running AI batch processes without blocking the entire pipeline.
+### Why Airflow over Cron?
+- **DAG dependency management:** Descriptions can't be enriched before scraping finishes; AI enrichment requires Bronze data to exist. Airflow enforces this ordering.
+- **Built-in retry logic:** External API calls (LinkedIn, Clearbit, Gemini) fail intermittently. Airflow's `retries=1` with `retry_delay=2min` handles transient failures without custom retry loops.
+- **Observability:** The Airflow UI provides task-level logging, execution history, and failure alerting out of the box.
 
-### The Gemini Advantage vs. Deterministic Parsing
-Regex and keyword-based parsers fail to capture context. Gemini is integrated to provide:
-*   **Semantic Deduplication:** Identifying if "Mobile Dev" and "iOS Engineer" roles share the same core requirements.
-*   **Cultural Sentiment Analysis:** Synthesizing raw website text into a "Recruiter-Ready" summary of company maturity and technical focus.
-*   **Tech Stack Extraction:** Intelligently distinguishing between "nice-to-have" skills and mandatory core competencies.
+### Why Gemini for Text Extraction?
+Regex-based parsers work for structured formats, but LinkedIn job descriptions are freeform. Gemini handles:
+- **Tech stack extraction:** Parsing tools/languages from unstructured prose, distinguishing requirements from nice-to-haves.
+- **Company profiling:** Synthesizing raw website text into structured fields (industry, size, sentiment) that would require multiple specialized NLP models to replicate deterministically.
+
+**Limitation acknowledged:** Gemini-generated fields like sentiment summaries are LLM interpretations, not ground-truth data. They should be treated as approximate metadata.
 
 ---
 
-## Reliability & Resilience (The Fallback Pattern)
-*Engineered for 99% Uptime in non-deterministic environments.*
+## Resilience: Multi-Model Fallback
 
-A core feature of this repository is the **Multi-Model Fallback System** implemented in `CompanyEnricher`. Facing the reality of API quotas (429 errors) and model availability, the enrichment engine implements a cascading safety net:
+The `CompanyEnricher` class implements a **cascading model fallback** to handle Gemini API quota exhaustion (`429 / RESOURCE_EXHAUSTED` errors):
 
 ```python
-# Strategic cascading fallback logic
 models_to_try = [
-    'gemini-3-flash-preview', # Tier 1: High Intelligence
-    'gemini-2.5-flash',       # Tier 2: Reliable Backup
-    'gemini-3.1-flash-lite',  # Tier 3: High-Volume Workhorse
-    'gemini-2.5-flash-lite'   # Tier 4: Final Safety Net
+    'gemini-3-flash-preview',  # Primary: highest capability
+    'gemini-2.5-flash',        # Fallback 1
+    'gemini-3.1-flash-lite',   # Fallback 2: highest daily quota
+    'gemini-2.5-flash-lite'    # Final fallback
 ]
 ```
 
-**Key Resilience Pillars:**
-*   **Automatic Model Rotation:** Upon detecting `RESOURCE_EXHAUSTED` or `429` errors, the pipeline instantly switches to a higher-quota model without failing the DAG.
-*   **Stateful Deduplication:** The pipeline queries the database memory BEFORE scraping, reducing external API calls by up to 70%.
-*   **Graceful Degradation:** If all LLM tiers fail, the system falls back to basic metadata extraction to ensure the pipeline completes its cycle.
+**How it works:**
+1. The pipeline attempts the primary model first.
+2. On quota errors, it automatically rotates to the next available model without failing the Airflow task.
+3. If **all models are exhausted**, the pipeline returns stub records (company name only) so the DAG completes its run and can retry enrichment on the next scheduled execution.
+
+Additionally, the scraping tasks query existing database records **before** making external requests, skipping jobs and companies that have already been processed.
 
 ---
 
 ## Installation & Setup
 
-If you want to run this project locally, you will need to provision the Gemini API key (it has a generous free tier!).
+### Prerequisites
+- Docker & Docker Compose
+- A free [Google Gemini API key](https://aistudio.google.com/app/apikey)
 
-1. **Configure Environment Variables:**
-   * Copy the provided `.env.example` file and rename it to `.env`.
-   * **Gemini API:** Create a free API key at [Google AI Studio](https://aistudio.google.com/app/apikey) and assign it to `GEMINI_API_KEY`.
+### Steps
 
-2. **Launch the Containerized Environment:**
-   Ensure Docker is running, then execute:
+1. **Configure environment variables:**
    ```bash
-   docker compose up -d --build
+   cp .env.example .env
+   # Edit .env and set your GEMINI_API_KEY
    ```
 
-3. **Access the Interfaces:**
-   Once the containers are spinning, you can monitor and explore the data directly in your browser:
-   * **🚀 Streamlit Dashboard (Data Analytics):** [http://localhost:8501](http://localhost:8501)
-   * **⚙️ Apache Airflow (DAG Orchestration):** [http://localhost:8080](http://localhost:8080)
-     *(Default Login: Use `airflow` for both username and password)*
+2. **Launch the infrastructure:**
+   ```bash
+   make up
+   ```
+   This starts the PostgreSQL database, Metabase, Nginx, and the full Airflow stack (scheduler, worker, API server, Redis).
+
+3. **Access the interfaces:**
+
+   | Service | URL | Credentials |
+   |---|---|---|
+   | Streamlit Dashboard | [http://localhost:8501](http://localhost:8501) | — |
+   | Airflow UI | [http://localhost:8080](http://localhost:8080) | `airflow` / `airflow` |
+   | HTML Dashboard | [http://localhost:8000](http://localhost:8000) | — |
+   | Metabase (BI) | [http://localhost:3000](http://localhost:3000) | Setup on first visit |
+
+4. **Teardown:**
+   ```bash
+   make down     # Stop containers
+   make fclean   # Stop + remove all images and volumes
+   ```
 
 ---
 
 ## Infrastructure
-The entire environment is containerized using **Docker** and **Docker Compose**, ensuring "Write Once, Run Anywhere" portability.
 
-*   **Airflow Stack:** Distributed via Docker (Webserver, Scheduler, Worker).
-*   **Database:** Persistent PostgreSQL volume for long-term data storage.
-*   **Scripts:** Isolated environment for scraping and LLM interaction, preventing dependency conflicts.
+The project runs across **two Docker Compose files** sharing a bridged network (`job_data_network`):
 
----
+| Compose File | Services |
+|---|---|
+| `docker-compose.yml` (root) | PostgreSQL 15 (job data), Metabase, Nginx (static dashboard) |
+| `airflow/docker-compose.yaml` | Airflow (API server, Scheduler, Worker, Triggerer, DAG Processor), PostgreSQL 16 (Airflow metadata), Redis (Celery broker), Streamlit |
 
-## Future Roadmap
-*   **MLOps Integration:** Implementing **MLflow** to track LLM prompt performance and cost-per-enrichment.
-*   **Data Quality (DQ):** Integrating **Great Expectations** to validate data schemas between the Bronze and Silver layers (e.g., ensuring no null Tech Stacks before dashboard generation).
-*   **Real-time Alerts:** Discord/Slack notifications for high-salary job discoveries.
+Data scripts are mounted into the Airflow worker container at `/opt/airflow/scripts/` and imported directly by the DAG.
 
 ---
 
-**Developed with a focus on system integrity and strategic AI application.**
-*Engineer: Theo BAHIN*
+## Project Structure
+
+```
+.
+├── Makefile                        # Build/run/clean shortcuts
+├── docker-compose.yml              # DB + Metabase + Nginx
+├── .env.example                    # Template for required env vars
+│
+├── airflow/
+│   ├── docker-compose.yaml         # Full Airflow stack + Streamlit
+│   ├── dags/
+│   │   └── linkedin_pipeline.py    # DAG definitions + task logic
+│   └── streamlit/
+│       └── app.py                  # Interactive dashboard
+│
+└── data_script/
+    ├── bronze_raw.py               # LinkedIn scraping + DB upsert
+    ├── silver_raw.py               # SQL view creation (regex skill flags)
+    ├── company_enrichment.py       # Clearbit + Gemini enrichment
+    ├── tmp_gold_raw.py             # Gold layer view (WIP)
+    ├── database_utils.py           # Shared DB engine factory
+    ├── test_db.py                  # Manual connection smoke test
+    ├── Dockerfile                  # Python runtime for scripts
+    └── requirements.txt            # Pinned dependencies
+```
+
+---
+
+## Known Limitations & Future Work
+
+### Current Limitations
+- **No automated tests.** `test_db.py` is a manual connectivity check, not a test suite.
+- **Gold layer is minimal.** The current `gold_market_stats` view is a passthrough; no pre-computed aggregations or KPIs exist yet.
+- **LLM-generated fields are approximate.** Company ratings and review counts are Gemini estimations, not sourced from review platforms.
+- **Single-transaction description enrichment.** A crash mid-batch rolls back all prior updates in that run.
+
+### Planned Improvements
+- [ ] **Add pytest suite:** Unit tests for parsing logic, DB operations, and JSON sanitization.
+- [ ] **Build a real Gold layer:** Aggregated views (top industries, skill demand matrix, salary distributions).
+- [ ] **Data validation:** Schema checks between layers using `pandera` or SQL constraints.
+- [ ] **CI/CD:** GitHub Actions for linting (`ruff`) and automated tests on push.
+- [ ] **Integrate real review data:** Replace LLM-estimated ratings with Glassdoor/Indeed API data.
+
+---
+
+*Built by Theo BAHIN — 42 Network*
